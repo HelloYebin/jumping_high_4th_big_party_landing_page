@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  height: auto;
+}
+.thContainer {
+  background-color: violet;
+  height: 80vh;
+  display: flex;
+}
+.thBack {
+  width: 80%;
+  border: 1px solid black;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content {
+  border: 1px solid blue;
+  height: 33%;
+}

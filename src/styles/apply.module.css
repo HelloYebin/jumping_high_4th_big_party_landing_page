@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  height: auto;
+}
+.applyContainer {
+  background-color: tomato;
+  height: 600px;
+  display: flex;
+}
+.bg {
+  width: 80%;
+  border: 1px solid black;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+}
+.logos {
+  height: 50%;
+  border: 1px solid brown;
+}
+.apply {
+  border: 1px solid blue;
+  height: 50%;
+}
+.logos > h1 {
+  text-align: center;
+}
+.apply > h1 {
+  text-align: center;
+}
+.buttons {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+.buttons > button {
+  background-color: tomato;
+  border: 1px solid white;
+  color: white;
+  width: 250px;
+  height: 100px;
+}
