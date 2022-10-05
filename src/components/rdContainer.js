@@ -1,6 +1,7 @@
 import styles from "../styles/rdContainer.module.css";
 import schedule from "../image/schedule.png";
 import map from "../image/map.png";
+import Map from "../components/map";
 
 function RdContainer() {
   return (
@@ -37,6 +38,7 @@ function RdContainer() {
         </div>
         <div className={styles.content}>
           <h1>준비물 및 짐 보관 안내</h1>
+          <Map />
           <button className={styles.detail}>
             <a>자세히보기</a>
           </button>

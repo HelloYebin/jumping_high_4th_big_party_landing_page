@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles/interval.module.css";
 
 function Interval() {
@@ -9,34 +9,35 @@ function Interval() {
   let [countMin, setCountMin] = useState("");
   let [countSec, setCountSec] = useState("");
 
-  intervalTimer = setInterval(() => {
-    //D-day 설정
-    const dDayTime = new Date("2022-12-25, 00:00:00");
-    let todayTime = new Date();
-    let diff = dDayTime - todayTime;
-    let countDown = Math.floor(diff / 1000);
+  useEffect(() => {
+    intervalTimer = setInterval(() => {
+      //D-day 설정
+      const dDayTime = new Date("2022-12-25, 00:00:00");
+      let todayTime = new Date();
+      let diff = dDayTime - todayTime;
+      let countDown = Math.floor(diff / 1000);
 
-    //날
-    let day = Math.floor(diff / (1000 * 60 * 60 * 24));
-    setCountDay(day);
+      //날
+      let day = Math.floor(diff / (1000 * 60 * 60 * 24));
+      setCountDay(day);
 
-    //시간
-    let hour = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    setCountHour(hour);
+      //시간
+      let hour = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      setCountHour(hour);
 
-    //분
-    let min = Math.floor((diff / (1000 * 60)) % 60);
-    setCountMin(min);
-
-    // 초
-    let sec = Math.floor((diff / 1000) % 60);
-    setCountSec(sec);
-
-    if (countDown <= 0) {
-      setDDay(false);
-      clearInterval(intervalTimer);
-    }
-  }, 1000);
+      //분
+      let min = Math.floor((diff / (1000 * 60)) % 60);
+      setCountMin(min);
+      console.log("hi");
+      // 초
+      let sec = Math.floor((diff / 1000) % 60);
+      setCountSec(sec);
+      if (countDown <= 0) {
+        setDDay(false);
+        clearInterval(intervalTimer);
+      }
+    }, 1000);
+  }, []);
 
   return (
     <div className={styles.dDay}>
