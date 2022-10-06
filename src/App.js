@@ -5,11 +5,25 @@ import NdContainer from "./components/ndContainer";
 import RdContainer from "./components/rdContainer";
 import ThContainer from "./components/thContainer";
 import Apply from "./components/apply";
-import { useRef } from "react";
+import Sponcer from "./components/sponcer";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import upLogo from "./image/logo.png";
+import { useState } from "react";
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+  const pageUpClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setScrollY(0);
+  };
+
   return (
     <div>
+      <Header />
+      <div className={styles.upLogo} onClick={pageUpClick}>
+        <img src={upLogo} width="60px" height="40px" />
+      </div>
       {/* <Video /> */}
       <div className={styles.container}>
         <video muted autoPlay loop className={styles.bgVideo}>
@@ -21,7 +35,9 @@ function App() {
       <NdContainer />
       <RdContainer />
       <ThContainer />
+      <Sponcer />
       <Apply />
+      <Footer />
     </div>
   );
 }

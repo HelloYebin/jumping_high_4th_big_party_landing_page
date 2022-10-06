@@ -9,6 +9,13 @@ function Interval() {
   let [countMin, setCountMin] = useState("");
   let [countSec, setCountSec] = useState("");
 
+  const [exp, setExp] = useState(false);
+  const earlybirdOverHandle = () => {
+    setExp(true);
+  };
+  const earlybirdLeaveHandle = () => {
+    setExp(false);
+  };
   useEffect(() => {
     intervalTimer = setInterval(() => {
       //D-day 설정
@@ -28,7 +35,6 @@ function Interval() {
       //분
       let min = Math.floor((diff / (1000 * 60)) % 60);
       setCountMin(min);
-      console.log("hi");
       // 초
       let sec = Math.floor((diff / 1000) % 60);
       setCountSec(sec);
@@ -82,6 +88,21 @@ function Interval() {
           )}
         </ul>
       </ul>
+      <div className={styles.buttons}>
+        <div
+          className={styles.earlybirdExp}
+          style={{ opacity: exp ? 1 : 0, left: exp ? "-220px" : "-240px" }}
+        >
+          <a>여기는 얼리버드 예약 설명 칸입니다.</a>
+        </div>
+        <button
+          onMouseOver={earlybirdOverHandle}
+          onMouseLeave={earlybirdLeaveHandle}
+        >
+          얼리버드 예약
+        </button>
+        <button>일반 예약</button>
+      </div>
     </div>
   );
 }

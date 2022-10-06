@@ -4,13 +4,12 @@ body {
   height: auto;
 }
 .applyContainer {
-  background-color: tomato;
-  height: 600px;
+  background-color: white;
+  height: 30vh;
   display: flex;
 }
-.bg {
+.apply {
   width: 80%;
-  border: 1px solid black;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -19,10 +18,8 @@ body {
 }
 .logos {
   height: 50%;
-  border: 1px solid brown;
 }
 .apply {
-  border: 1px solid blue;
   height: 50%;
 }
 .logos > h1 {
@@ -43,4 +40,14 @@ body {
   color: white;
   width: 250px;
   height: 100px;
+}
+.earlybirdExp {
+  width: 300px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  transition: 0.4s;
+}
+.earlybirdExp > a {
+  color: white;
 }

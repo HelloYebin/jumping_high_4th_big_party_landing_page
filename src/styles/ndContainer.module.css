@@ -5,21 +5,19 @@ body {
 }
 .ndContainer {
   background-color: beige;
-  height: 80vh;
+  height: 50vh;
   display: flex;
 }
 .ndBack {
   width: 80%;
-  border: 1px solid red;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
 .ndLogoContainer {
-  border: 1px solid green;
   width: 50%;
-  height: 70%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -29,9 +27,8 @@ body {
   width: 500px;
 }
 .ndBody {
-  border: 1px solid blue;
   width: 50%;
-  height: 70%;
+  height: 100%;
   justify-content: center;
   display: flex;
   flex-direction: column;

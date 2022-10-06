@@ -1,0 +1,66 @@
+import styles from "../styles/sponcer.module.css";
+import jumpingKorea from "../image/logo.png";
+
+function Sponcer() {
+  return (
+    <div className={styles.sponcerContainer}>
+      <div className={styles.bg}>
+        <div className={styles.logos}>
+          <h1>점핑하이 로고들 & 후원사</h1>
+          <ul className={styles.sponcers}>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+            <div className={styles.sponcer}>
+              <img
+                src={jumpingKorea}
+                width="80%"
+                height="80%"
+                className={styles.logo_jumpingKorea}
+              ></img>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Sponcer;

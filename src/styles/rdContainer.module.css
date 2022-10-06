@@ -3,31 +3,54 @@ body {
   margin: 0;
   height: auto;
 }
-.rdContainer {
-  background-color: lightblue;
-  height: 600px;
-  display: flex;
+.rdTitle {
+  background: url(https://www.qatar2022.qa/sites/default/files/2022-07/bg-orange.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
 }
-.rdBack {
+.rdTitle > a {
+  /* 글자 테두리 색 */
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: white;
+
+  /* 글자 배경색 투명 */
+  mix-blend-mode: lighten;
+
+  font-weight: bolder;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.rdContainer {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+}
+.rdBody {
+  height: 50vh;
   width: 80%;
-  border: 1px solid black;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-around;
+  top: -310px;
 }
 .content {
   display: flex;
   position: relative;
   width: 30%;
-  border: 1px solid purple;
   background-color: purple;
   border-radius: 15px;
-  height: 110%;
-  top: -150px;
+  height: 700px;
   overflow: hidden;
   flex-direction: column;
+  transition-duration: 0.2s;
+}
+.content:hover {
+  transform: translateY(-30px);
 }
 .content > h1 {
   color: white;
@@ -53,4 +76,7 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+.content > a > button {
+  cursor: pointer;
 }

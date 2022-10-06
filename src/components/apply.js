@@ -1,18 +1,32 @@
 import styles from "../styles/apply.module.css";
+import { useState } from "react";
 
 function Apply() {
+  const [exp, setExp] = useState(false);
+  const earlybirdOverHandle = () => {
+    setExp(true);
+  };
+  const earlybirdLeaveHandle = () => {
+    setExp(false);
+  };
   return (
     <div className={styles.applyContainer}>
-      <div className={styles.bg}>
-        <div className={styles.logos}>
-          <h1>점핑하이 로고들 & 후원사</h1>
-        </div>
-        <div className={styles.apply}>
-          <h1>참가신청</h1>
-          <div className={styles.buttons}>
-            <button>얼리버드 예약</button>
-            <button>일반 예약</button>
+      <div className={styles.apply}>
+        <h1>참가신청</h1>
+        <div className={styles.buttons}>
+          <div
+            className={styles.earlybirdExp}
+            style={{ opacity: exp ? 1 : 0, left: exp ? "140px" : "120px" }}
+          >
+            <a>여기는 얼리버드 예약 설명 칸입니다.</a>
           </div>
+          <button
+            onMouseOver={earlybirdOverHandle}
+            onMouseLeave={earlybirdLeaveHandle}
+          >
+            얼리버드 예약
+          </button>
+          <button>일반 예약</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,41 @@
+.headerContainer {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 1px solid white;
+  mix-blend-mode: hard-light;
+  top: 0px;
+  transition: 0.4s;
+}
+.headerContainer:hover {
+  background-color: beige;
+  mix-blend-mode: normal;
+  color: black;
+}
+.headerContent {
+  position: relative;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.headerList {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+  width: 100%;
+  justify-content: flex-end;
+}
+.headerList > li {
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.headerList > li:hover {
+  color: brown;
+}
