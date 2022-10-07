@@ -1,0 +1,36 @@
+body,
+html {
+  margin: 0;
+}
+.container {
+  overflow: hidden;
+  max-height: 100vh;
+}
+.bgVideo {
+  position: relative;
+  width: 100%;
+}
+.black {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 2;
+}
+.upLogo {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  right: 30px;
+  z-index: 15;
+  background-color: royalblue;
+  bottom: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid white;
+  cursor: pointer;
+}

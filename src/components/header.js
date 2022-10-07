@@ -2,6 +2,7 @@ import styles from "../styles/header.module.css";
 import { useEffect } from "react";
 import { useState } from "react";
 import headerLogo from "../image/logo.png";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   // 스크롤이 50px 이상 내려올경우 true값을 넣어줄 useState
@@ -38,16 +39,46 @@ export default function Header() {
       style={{ top: scroll ? "-70px" : "0px", opacity: scroll ? "0" : "1" }}
     >
       <div className={styles.headerContent}>
-        <img src={headerLogo} width="120px" height="80px" />
-        <ul
-          className={styles.headerList}
-          style={{ color: overMouse ? "green" : "white" }}
-        >
-          <li>여기는 헤더입니다.</li>
-          <li>점핑빅파티</li>
-          <li>행사안내</li>
-          <li>행사소식</li>
-          <li>참가신청</li>
+        <Link to="/">
+          <img src={headerLogo} width="120px" height="80px" />
+        </Link>
+        <ul className={styles.headerList}>
+          <li>
+            <Link
+              to="/intro/summary"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <a>점핑빅파티</a>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/apply"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <a>행사안내</a>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/apply"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <a>행사소식</a>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/apply"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <a>참가신청</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

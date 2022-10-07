@@ -8,6 +8,9 @@ function Interval() {
   let [countHour, setCountHour] = useState("");
   let [countMin, setCountMin] = useState("");
   let [countSec, setCountSec] = useState("");
+  let [secMin, setMinPop] = useState(false);
+  let [secHour, setHourPop] = useState(false);
+  let [secDay, setDayPop] = useState(false);
 
   const [exp, setExp] = useState(false);
   const earlybirdOverHandle = () => {
@@ -32,12 +35,32 @@ function Interval() {
       let hour = Math.floor((diff / (1000 * 60 * 60)) % 24);
       setCountHour(hour);
 
+      if (hour === 0) {
+        setDayPop(true);
+      } else if (hour > 0) {
+        setDayPop(false);
+      }
+
       //분
       let min = Math.floor((diff / (1000 * 60)) % 60);
       setCountMin(min);
+
+      if (min === 0) {
+        setHourPop(true);
+      } else if (min > 0) {
+        setHourPop(false);
+      }
+
       // 초
       let sec = Math.floor((diff / 1000) % 60);
       setCountSec(sec);
+
+      if (sec === 0) {
+        setMinPop(true);
+      } else if (sec > 0) {
+        setMinPop(false);
+      }
+
       if (countDown <= 0) {
         setDDay(false);
         clearInterval(intervalTimer);
@@ -54,7 +77,9 @@ function Interval() {
         <ul className={styles.countDownTime}>
           {dDay ? (
             <li>
-              <div className={styles.times}>{`${countDay}`}</div>
+              <div
+                className={`${styles.times} ${secDay ? `${styles.pop}` : ""} `}
+              >{`${countDay}`}</div>
               <span className={styles.countDownLabel}>일</span>
             </li>
           ) : (
@@ -63,7 +88,9 @@ function Interval() {
 
           {dDay ? (
             <li>
-              <div className={styles.times}>{`${countHour}`}</div>
+              <div
+                className={`${styles.times} ${secHour ? `${styles.pop}` : ""} `}
+              >{`${countHour}`}</div>
               <span className={styles.countDownLabel}>시간</span>
             </li>
           ) : (
@@ -72,7 +99,9 @@ function Interval() {
 
           {dDay ? (
             <li>
-              <div className={styles.times}>{`${countMin}`}</div>
+              <div
+                className={`${styles.times} ${secMin ? `${styles.pop}` : ""}`}
+              >{`${countMin}`}</div>
               <span className={styles.countDownLabel}>분</span>
             </li>
           ) : (
@@ -80,7 +109,9 @@ function Interval() {
           )}
           {dDay ? (
             <li>
-              <div className={styles.times}>{`${countSec}`}</div>
+              <div
+                className={`${styles.times} ${styles.pop}`}
+              >{`${countSec}`}</div>
               <span className={styles.countDownLabel}>초</span>
             </li>
           ) : (
