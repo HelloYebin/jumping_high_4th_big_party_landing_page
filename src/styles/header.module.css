@@ -40,6 +40,6 @@
   color: white;
   text-decoration: none;
 }
-.toApply > a:hover {
+.toApply > p:hover {
   color: brown;
 }

@@ -1,0 +1,19 @@
+.introNav {
+  display: flex;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  z-index: 10;
+  border: 1px solid red;
+}
+.navArrow {
+  transition: 0.2s;
+}
+.navList {
+  border: 1px solid blue;
+  left: 90px;
+  top: 23px;
+  background-color: yellow;
+  position: fixed;
+}

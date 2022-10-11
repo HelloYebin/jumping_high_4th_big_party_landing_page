@@ -2,8 +2,15 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./routes/home";
-import RouteSummary from "./routes/routeSummary";
 import RouteApply from "./routes/routeApply";
+import RouteSummary from "./routes/intro/routeSummary";
+import RouteHistory from "./routes/intro/routeHistory";
+import RouteInvite from "./routes/intro/routeInvite";
+import RouteSchedule from "./routes/information/routeSchedule";
+import RoutePrepare from "./routes/information/routePrepare";
+import RouteLocation from "./routes/information/routeLocation";
+import RouteStorage from "./routes/information/routeStorage";
+import RouteNotice from "./routes/news/routeNotice";
 
 function App() {
   return (
@@ -13,6 +20,13 @@ function App() {
         <Routes>
           <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
           <Route path="/intro/summary" element={<RouteSummary />} />
+          <Route path="/intro/history" element={<RouteHistory />} />
+          <Route path="/intro/invite" element={<RouteInvite />} />
+          <Route path="/info/schedule" element={<RouteSchedule />} />
+          <Route path="/info/prepare" element={<RoutePrepare />} />
+          <Route path="/info/location" element={<RouteLocation />} />
+          <Route path="/info/storage" element={<RouteStorage />} />
+          <Route path="/news/notice" element={<RouteNotice />} />
           <Route path="/apply" element={<RouteApply />} />
         </Routes>
         <Footer />

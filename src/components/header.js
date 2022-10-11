@@ -32,7 +32,7 @@ export default function Header() {
     setOverMouse(false);
   };
   return (
-    <div
+    <nav
       className={styles.headerContainer}
       onMouseEnter={overHandle}
       onMouseLeave={leaveHandle}
@@ -49,7 +49,25 @@ export default function Header() {
               className={styles.toApply}
               style={{ color: overMouse ? "green" : "white" }}
             >
-              <a>점핑빅파티</a>
+              <p>점핑빅파티</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/info/schedule"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <p>행사안내</p>
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/news/notice"
+              className={styles.toApply}
+              style={{ color: overMouse ? "green" : "white" }}
+            >
+              <p>행사소식</p>
             </Link>
           </li>
           <li>
@@ -58,29 +76,11 @@ export default function Header() {
               className={styles.toApply}
               style={{ color: overMouse ? "green" : "white" }}
             >
-              <a>행사안내</a>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/apply"
-              className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
-            >
-              <a>행사소식</a>
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/apply"
-              className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
-            >
-              <a>참가신청</a>
+              <p>참가신청</p>
             </Link>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }

@@ -51,4 +51,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   align-items: center;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+.logo_jumpingKorea:hover {
+  opacity: 1;
 }
