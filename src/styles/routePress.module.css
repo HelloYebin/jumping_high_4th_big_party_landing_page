@@ -5,8 +5,9 @@ html {
 .banner {
   position: relative;
   top: 0;
+  opacity: 0.8;
 }
-.summary {
+.notice {
   margin-top: 0;
   width: 60%;
   position: relative;

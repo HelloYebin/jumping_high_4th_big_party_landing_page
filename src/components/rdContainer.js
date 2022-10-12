@@ -4,6 +4,7 @@ import map from "../image/map.png";
 import Map from "../components/map";
 import { useState } from "react";
 import ScheduleModal from "./scheduleModal";
+import "../font.css";
 
 function RdContainer() {
   const [modal, setModal] = useState(false);

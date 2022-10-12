@@ -4,7 +4,7 @@ body {
   height: auto;
 }
 .thContainer {
-  background-color: violet;
+  background-color: #d2001a;
   height: 80vh;
   display: flex;
 }
@@ -13,11 +13,6 @@ body {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-}
-.content {
-  height: 33%;
-  overflow: hidden;
-  margin-top: 2px;
 }
 .content > img {
   transition-duration: 0.2s;
@@ -31,6 +26,8 @@ body {
   color: white;
   background-color: black;
 }
-.noticeImg {
-  position: relative;
+.contentContainer {
+  height: 32%;
+  overflow: hidden;
+  margin-top: 8px;
 }

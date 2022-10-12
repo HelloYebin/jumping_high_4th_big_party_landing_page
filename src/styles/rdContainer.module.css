@@ -11,17 +11,18 @@ body {
 }
 .rdTitle > a {
   /* 글자 테두리 색 */
-  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 
   /* 글자 배경색 투명 */
   mix-blend-mode: lighten;
 
   font-weight: bolder;
-  font-size: 200px;
+  font-size: 250px;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 130px;
+  font-family: "DoHyeon";
 }
 .rdContainer {
   display: flex;

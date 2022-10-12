@@ -9,7 +9,7 @@
   transition: 0.4s;
 }
 .headerContainer:hover {
-  background-color: beige;
+  background-color: #3d0000;
   mix-blend-mode: normal;
   color: black;
 }

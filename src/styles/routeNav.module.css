@@ -1,19 +1,32 @@
-.introNav {
+.routeNavContainer {
   display: flex;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
   z-index: 10;
-  border: 1px solid red;
 }
 .navArrow {
   transition: 0.2s;
 }
 .navList {
-  border: 1px solid blue;
-  left: 90px;
-  top: 23px;
-  background-color: yellow;
+  border-radius: 0 0 10px 10px;
+  left: 150px;
+  top: 40px;
+  width: 210px;
+  background-color: white;
   position: fixed;
+  box-shadow: 0.1em 0.8em 0.8em rgba(0, 0, 0, 0.3);
+}
+.nav,
+.navCurrent {
+  font-size: 25px;
+}
+.nav > a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navCurrent > a {
+  margin-left: 10px;
+  margin-right: 10px;
 }

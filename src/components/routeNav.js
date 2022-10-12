@@ -22,6 +22,13 @@ export default function RouteNav({ current, nav }) {
     { id: 3, link: "/info/location", body: "행사장 위치" },
     { id: 4, link: "/info/storage", body: "짐 보관 안내" },
   ];
+
+  const newsList = [
+    { id: 1, link: "/news/notice", body: "공지사항" },
+    { id: 2, link: "/news/press", body: "보도자료" },
+    { id: 3, link: "/news/jumping", body: "점핑자료" },
+  ];
+
   const lis = [];
   if (nav === "점핑빅파티") {
     for (let i = 0; i < summaryList.length; i++) {
@@ -41,25 +48,48 @@ export default function RouteNav({ current, nav }) {
         </Link>
       );
     }
+  } else if (nav === "행사소식") {
+    for (let i = 0; i < newsList.length; i++) {
+      let t = newsList[i];
+      lis.push(
+        <Link key={t.id} to={`${t.link}`}>
+          <p>{`${t.body}`}</p>
+        </Link>
+      );
+    }
   }
+
   return (
-    <nav className={styles.introNav}>
-      <div>
+    <nav className={styles.routeNavContainer}>
+      <div className={styles.nav}>
         <a>{nav}</a>
-        <FontAwesomeIcon icon={faAngleRight} />
+        <a>
+          <FontAwesomeIcon icon={faAngleRight} />
+        </a>
       </div>
 
-      <div className={styles.navSummary} onClick={navClick}>
+      <div className={styles.navCurrent} onClick={navClick}>
         <a>{current}</a>
-        <FontAwesomeIcon
-          icon={faAngleRight}
-          className={styles.navArrow}
-          style={{ rotate: clickStatus ? "-90deg" : "90deg" }}
-        />
+        <a>
+          <FontAwesomeIcon
+            icon={faAngleRight}
+            className={styles.navArrow}
+            style={{ rotate: clickStatus ? "-90deg" : "90deg" }}
+          />
+        </a>
       </div>
       <div
         className={styles.navList}
-        style={{ display: clickStatus ? "" : "none" }}
+        style={{
+          display: clickStatus ? "" : "none",
+          width:
+            nav === "행사소식"
+              ? "150px"
+              : "" || nav === "점핑빅파티"
+              ? "170px"
+              : "",
+          left: nav === "점핑빅파티" ? "190px" : "",
+        }}
       >
         {lis}
       </div>

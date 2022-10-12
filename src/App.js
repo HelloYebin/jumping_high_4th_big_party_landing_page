@@ -11,6 +11,8 @@ import RoutePrepare from "./routes/information/routePrepare";
 import RouteLocation from "./routes/information/routeLocation";
 import RouteStorage from "./routes/information/routeStorage";
 import RouteNotice from "./routes/news/routeNotice";
+import RoutePress from "./routes/news/routePress";
+import RouteJumping from "./routes/news/routeJumping";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path="/info/location" element={<RouteLocation />} />
           <Route path="/info/storage" element={<RouteStorage />} />
           <Route path="/news/notice" element={<RouteNotice />} />
+          <Route path="/news/press" element={<RoutePress />} />
+          <Route path="/news/jumping" element={<RouteJumping />} />
           <Route path="/apply" element={<RouteApply />} />
         </Routes>
         <Footer />
