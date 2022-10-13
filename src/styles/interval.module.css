@@ -12,11 +12,11 @@
 }
 .countDown {
   display: flex;
+  justify-content: center;
 }
 .countDownTime {
   padding-right: 30px;
   display: flex;
-  justify-content: center;
   padding-left: 0px;
 }
 .countDownTime > li {

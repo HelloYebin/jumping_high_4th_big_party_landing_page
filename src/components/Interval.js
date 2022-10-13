@@ -8,9 +8,9 @@ function Interval() {
   let [countHour, setCountHour] = useState("");
   let [countMin, setCountMin] = useState("");
   let [countSec, setCountSec] = useState("");
-  let [secMin, setMinPop] = useState(false);
-  let [secHour, setHourPop] = useState(false);
-  let [secDay, setDayPop] = useState(false);
+  let [minPop, setMinPop] = useState(false);
+  let [hourPop, setHourPop] = useState(false);
+  let [dayPop, setDayPop] = useState(false);
 
   const [exp, setExp] = useState(false);
   const earlybirdOverHandle = () => {
@@ -35,30 +35,34 @@ function Interval() {
       let hour = Math.floor((diff / (1000 * 60 * 60)) % 24);
       setCountHour(hour);
 
-      if (hour === 0) {
+      if (hour === 23) {
         setDayPop(true);
-      } else if (hour > 0) {
-        setDayPop(false);
+        setTimeout(() => {
+          setDayPop(false);
+        }, 1000);
       }
 
       //분
       let min = Math.floor((diff / (1000 * 60)) % 60);
       setCountMin(min);
 
-      if (min === 0) {
+      if (min === 59) {
         setHourPop(true);
-      } else if (min > 0) {
-        setHourPop(false);
+        setTimeout(() => {
+          setHourPop(false);
+        }, 1000);
       }
 
+      console.log(hourPop);
       // 초
       let sec = Math.floor((diff / 1000) % 60);
       setCountSec(sec);
 
-      if (sec === 0) {
+      if (sec === 59) {
         setMinPop(true);
-      } else if (sec > 0) {
-        setMinPop(false);
+        setTimeout(() => {
+          setMinPop(false);
+        }, 1000);
       }
 
       if (countDown <= 0) {
@@ -72,13 +76,13 @@ function Interval() {
     <div className={styles.dDay}>
       <ul className={styles.countDown}>
         <div className={styles.welcome}>
-          <h1>Countdown to BigParty</h1>
+          {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
         </div>
         <ul className={styles.countDownTime}>
           {dDay ? (
             <li>
               <div
-                className={`${styles.times} ${secDay ? `${styles.pop}` : ""} `}
+                className={`${styles.times} ${dayPop ? `${styles.pop}` : ""} `}
               >{`${countDay}`}</div>
               <span className={styles.countDownLabel}>일</span>
             </li>
@@ -89,7 +93,7 @@ function Interval() {
           {dDay ? (
             <li>
               <div
-                className={`${styles.times} ${secHour ? `${styles.pop}` : ""} `}
+                className={`${styles.times} ${hourPop ? `${styles.pop}` : ""} `}
               >{`${countHour}`}</div>
               <span className={styles.countDownLabel}>시간</span>
             </li>
@@ -100,7 +104,7 @@ function Interval() {
           {dDay ? (
             <li>
               <div
-                className={`${styles.times} ${secMin ? `${styles.pop}` : ""}`}
+                className={`${styles.times} ${minPop ? `${styles.pop}` : ""}`}
               >{`${countMin}`}</div>
               <span className={styles.countDownLabel}>분</span>
             </li>
