@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/interval.module.css";
 
 function Interval() {
@@ -53,7 +53,6 @@ function Interval() {
         }, 1000);
       }
 
-      console.log(hourPop);
       // 초
       let sec = Math.floor((diff / 1000) % 60);
       setCountSec(sec);
