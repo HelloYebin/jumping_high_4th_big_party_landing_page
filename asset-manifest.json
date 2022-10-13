@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/jumping_high_4th_big_party_landing_page/static/css/main.e8fe29bd.css",
+    "main.js": "/jumping_high_4th_big_party_landing_page/static/js/main.1faaf598.js",
+    "static/media/1122.mp4": "/jumping_high_4th_big_party_landing_page/static/media/1122.9f277b0b27824d34b235.mp4",
+    "static/media/esamanru.ttf": "/jumping_high_4th_big_party_landing_page/static/media/esamanru.5092051bd2ced1c65f91.ttf",
+    "static/media/KOTRALEAP.ttf": "/jumping_high_4th_big_party_landing_page/static/media/KOTRALEAP.e848c0c12f25f9a935b3.ttf",
+    "static/media/notice.png": "/jumping_high_4th_big_party_landing_page/static/media/notice.b8aab793da83dd401ecc.png",
+    "static/media/DoHyeonRegular.ttf": "/jumping_high_4th_big_party_landing_page/static/media/DoHyeonRegular.33a15385076163ccf1b8.ttf",
+    "static/media/jumpingData.jpg": "/jumping_high_4th_big_party_landing_page/static/media/jumpingData.9960c58948e43bbb0eff.jpg",
+    "static/media/Philosopher-Bold.ttf": "/jumping_high_4th_big_party_landing_page/static/media/Philosopher-Bold.7e98a8743136a6828ccf.ttf",
+    "static/media/news.JPG": "/jumping_high_4th_big_party_landing_page/static/media/news.c17bd1832fcc89185c6f.JPG",
+    "static/media/logo.png": "/jumping_high_4th_big_party_landing_page/static/media/logo.b5dcd807e8b1aa420c7c.png",
+    "static/media/schedule.png": "/jumping_high_4th_big_party_landing_page/static/media/schedule.785389b709df909e2c0a.png",
+    "index.html": "/jumping_high_4th_big_party_landing_page/index.html",
+    "main.e8fe29bd.css.map": "/jumping_high_4th_big_party_landing_page/static/css/main.e8fe29bd.css.map",
+    "main.1faaf598.js.map": "/jumping_high_4th_big_party_landing_page/static/js/main.1faaf598.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e8fe29bd.css",
+    "static/js/main.1faaf598.js"
+  ]
+}
