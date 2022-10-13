@@ -23,7 +23,8 @@ body {
   text-align: center;
   font-family: "Manru";
   margin-top: 30px;
-  color: white;
+  color: whitesmoke;
+  letter-spacing: 10px;
 }
 .buttons {
   margin-top: 30px;

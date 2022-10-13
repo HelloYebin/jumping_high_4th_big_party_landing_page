@@ -18,10 +18,10 @@ import RoutePressDetail from "./routes/news/routePressDetail";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Header />
         <Routes>
-          <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/intro/summary" element={<RouteSummary />} />
           <Route path="/intro/history" element={<RouteHistory />} />
           <Route path="/intro/invite" element={<RouteInvite />} />
@@ -31,7 +31,7 @@ function App() {
           <Route path="/info/storage" element={<RouteStorage />} />
           <Route path="/news/notice" element={<RouteNotice />} />
           <Route path="/news/press" element={<RoutePress />} />
-          <Route path="/news/press/1" element={<RoutePressDetail />} />
+          <Route path="/news/press/detail" element={<RoutePressDetail />} />
           <Route path="/news/jumping" element={<RouteJumping />} />
           <Route path="/apply" element={<RouteApply />} />
         </Routes>

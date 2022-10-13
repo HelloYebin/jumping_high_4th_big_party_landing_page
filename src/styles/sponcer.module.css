@@ -4,7 +4,7 @@ body {
   height: auto;
 }
 .sponcerContainer {
-  background-color: #59ce8f;
+  background-color: #2d4263;
   height: 30vh;
   display: flex;
 }
@@ -23,6 +23,8 @@ body {
   text-align: center;
   font-family: "Manru";
   margin-top: 30px;
+  color: whitesmoke;
+  letter-spacing: 10px;
 }
 .sponcers {
   display: flex;

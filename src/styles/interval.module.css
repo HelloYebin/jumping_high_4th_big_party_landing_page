@@ -69,6 +69,7 @@
   background-color: black;
   position: absolute;
   transition: 0.4s;
+  border: 2px solid white;
 }
 .earlybirdExp > a {
   color: white;
