@@ -6,7 +6,7 @@ function Sponcer() {
     <div className={styles.sponcerContainer}>
       <div className={styles.bg}>
         <div className={styles.logos}>
-          <h1>점핑하이 로고들 & 후원사</h1>
+          <h1>스폰서</h1>
           <ul className={styles.sponcers}>
             <div className={styles.sponcer}>
               <img

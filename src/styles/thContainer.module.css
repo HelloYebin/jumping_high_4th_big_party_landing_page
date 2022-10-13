@@ -4,7 +4,7 @@ body {
   height: auto;
 }
 .thContainer {
-  background-color: #d2001a;
+  background-color: #181818;
   height: 80vh;
   display: flex;
 }
@@ -21,10 +21,15 @@ body {
   transform: scale(1.1);
 }
 .content > h1 {
-  position: fixed;
   z-index: 10;
   color: white;
   background-color: black;
+  position: absolute;
+  font-family: "Manru";
+  font-size: 50px;
+  letter-spacing: 8px;
+  left: 10px;
+  padding-left: 10px;
 }
 .contentContainer {
   height: 32%;

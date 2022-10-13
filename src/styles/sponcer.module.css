@@ -4,7 +4,7 @@ body {
   height: auto;
 }
 .sponcerContainer {
-  background-color: tomato;
+  background-color: #59ce8f;
   height: 30vh;
   display: flex;
 }
@@ -19,14 +19,10 @@ body {
 .logos {
   height: 50%;
 }
-.apply {
-  height: 50%;
-}
 .logos > h1 {
   text-align: center;
-}
-.apply > h1 {
-  text-align: center;
+  font-family: "Manru";
+  margin-top: 30px;
 }
 .sponcers {
   display: flex;

@@ -7,6 +7,9 @@
   transform: translateX(-50%);
   flex-direction: column;
 }
+.welcome {
+  font-family: philosopher;
+}
 .countDown {
   display: flex;
 }

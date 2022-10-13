@@ -71,7 +71,7 @@ function Interval() {
   return (
     <div className={styles.dDay}>
       <ul className={styles.countDown}>
-        <div>
+        <div className={styles.welcome}>
           <h1>Countdown to BigParty</h1>
         </div>
         <ul className={styles.countDownTime}>

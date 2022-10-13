@@ -47,7 +47,7 @@ export default function Header() {
             <Link
               to="/intro/summary"
               className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
+              style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
               <p>점핑빅파티</p>
             </Link>
@@ -56,7 +56,7 @@ export default function Header() {
             <Link
               to="/info/schedule"
               className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
+              style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
               <p>행사안내</p>
             </Link>
@@ -65,7 +65,7 @@ export default function Header() {
             <Link
               to="/news/notice"
               className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
+              style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
               <p>행사소식</p>
             </Link>
@@ -74,7 +74,7 @@ export default function Header() {
             <Link
               to="/apply"
               className={styles.toApply}
-              style={{ color: overMouse ? "green" : "white" }}
+              style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
               <p>참가신청</p>
             </Link>

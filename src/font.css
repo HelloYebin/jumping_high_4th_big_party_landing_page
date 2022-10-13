@@ -3,3 +3,16 @@
   font-weight: 400;
   src: url("./fonts/DoHyeonRegular.ttf");
 }
+@font-face {
+  font-family: Kotra;
+  src: url("./fonts/KOTRALEAP.ttf");
+}
+@font-face {
+  font-family: Manru;
+  src: url("./fonts/esamanru.ttf");
+}
+@font-face {
+  font-family: Philosopher;
+  font-weight: bold;
+  src: url("./fonts/Philosopher-Bold.ttf");
+}

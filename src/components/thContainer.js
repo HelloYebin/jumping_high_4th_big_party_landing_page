@@ -3,6 +3,7 @@ import noticeImg from "../image/notice.png";
 import newsImg from "../image/news.JPG";
 import jumpingData from "../image/jumpingData.jpg";
 import { Link } from "react-router-dom";
+import "../font.css";
 
 function ThContainer() {
   return (
