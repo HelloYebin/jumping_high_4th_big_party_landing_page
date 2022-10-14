@@ -31,7 +31,7 @@ function App() {
           <Route path="/info/storage" element={<RouteStorage />} />
           <Route path="/news/notice" element={<RouteNotice />} />
           <Route path="/news/press" element={<RoutePress />} />
-          <Route path="/news/press/detail" element={<RoutePressDetail />} />
+          <Route path="/news/press/:id" element={<RoutePressDetail />} />
           <Route path="/news/jumping" element={<RouteJumping />} />
           <Route path="/apply" element={<RouteApply />} />
         </Routes>

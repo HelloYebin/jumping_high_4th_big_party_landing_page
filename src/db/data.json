@@ -1,0 +1,37 @@
+{
+  "presses": [
+    { "id": 1, "title": "빅파티 4회 개최", "thumbnail": "../../img/news.JPG" },
+    {
+      "id": 2,
+      "title": "보도자료 제목입니다.",
+      "thumbnail": "img/news.JPG"
+    },
+    {
+      "id": 3,
+      "title": "국대 출신이 어쩌다…박태환",
+      "thumbnail": "newsPic",
+      "body": "[스포티비뉴스=정서희 기자]기자 수영 국가대표 출신 안녕 "
+    },
+    { "id": 4, "title": "축제의 장 펼쳐진다.", "thumbnail": "newsPic" },
+    {
+      "id": 5,
+      "title": "[CEO 칼럼] 메타버스 ‘오시리아 플랫폼’",
+      "thumbnail": "newsPic"
+    },
+    {
+      "id": 6,
+      "title": "노화와 영양, 그리고 수명 연장",
+      "thumbnail": "newsPic"
+    },
+    {
+      "id": 7,
+      "title": "가수 강민경이 65억원 규모의 빌딩을 매입",
+      "thumbnail": "newsPic"
+    },
+    {
+      "id": 8,
+      "title": "담수식물 좀개갓냉이, 아토피 개선 효능 발견",
+      "thumbnail": "newsPic"
+    }
+  ]
+}

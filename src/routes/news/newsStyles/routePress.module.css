@@ -9,17 +9,42 @@ html {
 }
 .notice {
   margin-top: 0;
-  width: 60%;
+  max-width: 60%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
+  border: 1px solid blue;
 }
-.title {
+.noticeTitle {
   text-align: center;
 }
 .body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  border: 1px solid green;
+  overflow: hidden;
+}
+.pressContent {
+  width: 450px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.imgContainer {
+  overflow: hidden;
+}
+.img {
+  transition: 0.2s;
+}
+.img:hover {
+  transform: scale(1.2);
+}
+.articleTitle {
+  color: black;
+  text-decoration: none;
 }
