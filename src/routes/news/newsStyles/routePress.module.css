@@ -7,23 +7,21 @@ html {
   top: 0;
   opacity: 0.8;
 }
-.notice {
+.press {
   margin-top: 0;
   max-width: 60%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   z-index: 0;
-  border: 1px solid blue;
 }
-.noticeTitle {
+.title {
   text-align: center;
 }
 .body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  border: 1px solid green;
   overflow: hidden;
 }
 .pressContent {

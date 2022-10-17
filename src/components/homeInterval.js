@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from "../styles/interval.module.css";
+import styles from "../styles/homeInterval.module.css";
 
-function Interval() {
+function HomeInterval() {
   let [dDay, setDDay] = useState(true);
   let intervalTimer;
   let [countDay, setCountDay] = useState("");
@@ -140,4 +140,4 @@ function Interval() {
     </div>
   );
 }
-export default Interval;
+export default HomeInterval;

@@ -1,7 +1,7 @@
-import styles from "../styles/sponcer.module.css";
+import styles from "../styles/homeSponcer.module.css";
 import jumpingKorea from "../image/logo.png";
 
-function Sponcer() {
+function HomeSponcer() {
   return (
     <div className={styles.sponcerContainer}>
       <div className={styles.bg}>
@@ -63,4 +63,4 @@ function Sponcer() {
   );
 }
 
-export default Sponcer;
+export default HomeSponcer;

@@ -2,7 +2,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./routes/home";
-import RouteApply from "./routes/routeApply";
+import RouteApply from "./routes/apply/routeApply";
 import RouteSummary from "./routes/intro/routeSummary";
 import RouteHistory from "./routes/intro/routeHistory";
 import RouteInvite from "./routes/intro/routeInvite";
@@ -14,11 +14,14 @@ import RouteNotice from "./routes/news/routeNotice";
 import RoutePress from "./routes/news/routePress";
 import RouteJumping from "./routes/news/routeJumping";
 import RoutePressDetail from "./routes/news/routePressDetail";
+import ScrollTop from "./components/scrollTop";
+import RouteReservation from "./routes/apply/routeReservation";
 
 function App() {
   return (
     <div>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ScrollTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -34,6 +37,7 @@ function App() {
           <Route path="/news/press/:id" element={<RoutePressDetail />} />
           <Route path="/news/jumping" element={<RouteJumping />} />
           <Route path="/apply" element={<RouteApply />} />
+          <Route path="/apply/reservation" element={<RouteReservation />} />
         </Routes>
         <Footer />
       </BrowserRouter>

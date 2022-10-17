@@ -1,7 +1,7 @@
-import styles from "../styles/apply.module.css";
+import styles from "../styles/homeApply.module.css";
 import { useState } from "react";
 
-function Apply() {
+function HomeApply() {
   const [exp, setExp] = useState(false);
   const earlybirdOverHandle = () => {
     setExp(true);
@@ -33,4 +33,4 @@ function Apply() {
   );
 }
 
-export default Apply;
+export default HomeApply;

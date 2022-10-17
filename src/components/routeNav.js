@@ -34,7 +34,7 @@ export default function RouteNav({ current, nav }) {
     for (let i = 0; i < summaryList.length; i++) {
       let t = summaryList[i];
       lis.push(
-        <Link key={t.id} to={`${t.link}`}>
+        <Link key={t.id} to={`${t.link}`} className={styles.lists}>
           <p>{`${t.body}`}</p>
         </Link>
       );
@@ -43,7 +43,7 @@ export default function RouteNav({ current, nav }) {
     for (let i = 0; i < infoList.length; i++) {
       let t = infoList[i];
       lis.push(
-        <Link key={t.id} to={`${t.link}`}>
+        <Link key={t.id} to={`${t.link}`} className={styles.lists}>
           <p>{`${t.body}`}</p>
         </Link>
       );
@@ -52,7 +52,7 @@ export default function RouteNav({ current, nav }) {
     for (let i = 0; i < newsList.length; i++) {
       let t = newsList[i];
       lis.push(
-        <Link key={t.id} to={`${t.link}`}>
+        <Link key={t.id} to={`${t.link}`} className={styles.lists}>
           <p>{`${t.body}`}</p>
         </Link>
       );
