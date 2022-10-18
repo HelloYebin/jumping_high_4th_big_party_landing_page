@@ -1,0 +1,32 @@
+{
+  "bookers": [
+    {
+      "id": 1,
+      "name": "오예빈",
+      "number": "01046282821",
+      "res": "일반",
+      "payment": "no"
+    },
+    {
+      "name": "1233",
+      "number": "222",
+      "res": "일반",
+      "jumping_high_4th_big_party_landing_pageId": "apply",
+      "id": 2
+    },
+    {
+      "name": "강아지",
+      "number": "01012345678",
+      "res": "일반",
+      "jumping_high_4th_big_party_landing_pageId": "apply",
+      "id": 3
+    },
+    {
+      "name": "강아지",
+      "number": "1111111",
+      "res": "일반",
+      "jumping_high_4th_big_party_landing_pageId": "apply",
+      "id": 4
+    }
+  ]
+}

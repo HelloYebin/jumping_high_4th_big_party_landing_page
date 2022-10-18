@@ -49,7 +49,7 @@ function RdContainer() {
           </a>
         </div>
         <div className={styles.content}>
-          <h1>준비물 및 짐 보관 안내</h1>
+          <h1>부스 안내</h1>
           <Map />
           <h4>
             주소 : 서울특별시 ~~ <br />

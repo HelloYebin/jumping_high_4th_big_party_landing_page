@@ -20,7 +20,7 @@ export default function RouteNav({ current, nav }) {
     { id: 1, link: "/info/schedule", body: "프로그램 일정" },
     { id: 2, link: "/info/prepare", body: "참가자 준비물" },
     { id: 3, link: "/info/location", body: "행사장 위치" },
-    { id: 4, link: "/info/storage", body: "짐 보관 안내" },
+    { id: 4, link: "/info/booth", body: "부스 안내" },
   ];
 
   const newsList = [
