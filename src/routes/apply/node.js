@@ -1,6 +1,6 @@
 app.use(bodyParser.json());
-// "/payments/complete"에 대한 POST 요청을 처리
-app.post("/payments/complete", async (req, res) => {
+// "//iamport-webhook"에 대한 POST 요청을 처리
+app.post("/iamport-webhook", async (req, res) => {
   try {
     const { imp_uid, merchant_uid } = req.body; // req의 body에서 imp_uid, merchant_uid 추출
 

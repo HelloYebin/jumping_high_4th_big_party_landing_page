@@ -16,29 +16,32 @@ import RouteJumping from "./routes/news/routeJumping";
 import RoutePressDetail from "./routes/news/routePressDetail";
 import ScrollTop from "./components/scrollTop";
 import RouteReservation from "./routes/apply/routeReservation";
+import styles from "./App.module.css";
 
 function App() {
   return (
-    <div>
+    <div className={styles.appContainer}>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollTop />
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/intro/summary" element={<RouteSummary />} />
-          <Route path="/intro/history" element={<RouteHistory />} />
-          <Route path="/intro/invite" element={<RouteInvite />} />
-          <Route path="/info/schedule" element={<RouteSchedule />} />
-          <Route path="/info/prepare" element={<RoutePrepare />} />
-          <Route path="/info/location" element={<RouteLocation />} />
-          <Route path="/info/booth" element={<RouteStorage />} />
-          <Route path="/news/notice" element={<RouteNotice />} />
-          <Route path="/news/press" element={<RoutePress />} />
-          <Route path="/news/press/:id" element={<RoutePressDetail />} />
-          <Route path="/news/jumping" element={<RouteJumping />} />
-          <Route path="/apply" element={<RouteApply />} />
-          <Route path="/apply/reservation" element={<RouteReservation />} />
-        </Routes>
+        <div className={styles.appContents}>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/intro/summary" element={<RouteSummary />} />
+            <Route path="/intro/history" element={<RouteHistory />} />
+            <Route path="/intro/invite" element={<RouteInvite />} />
+            <Route path="/info/schedule" element={<RouteSchedule />} />
+            <Route path="/info/prepare" element={<RoutePrepare />} />
+            <Route path="/info/location" element={<RouteLocation />} />
+            <Route path="/info/booth" element={<RouteStorage />} />
+            <Route path="/news/notice" element={<RouteNotice />} />
+            <Route path="/news/press" element={<RoutePress />} />
+            <Route path="/news/press/:id" element={<RoutePressDetail />} />
+            <Route path="/news/jumping" element={<RouteJumping />} />
+            <Route path="/apply" element={<RouteApply />} />
+            <Route path="/apply/reservation" element={<RouteReservation />} />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
