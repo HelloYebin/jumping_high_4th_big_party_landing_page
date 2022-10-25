@@ -5,7 +5,6 @@
   background-color: #181818;
   height: 70vh;
   display: flex;
-  border-radius: 100% 100% 0 0;
   flex-wrap: wrap;
   flex-direction: column;
 }

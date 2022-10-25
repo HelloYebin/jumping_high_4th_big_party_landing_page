@@ -29,5 +29,51 @@
   flex-direction: column;
 }
 .resForm {
-  border: 1px solid red;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+}
+.infoForm {
+  margin: 15px 20px 15px 10px;
+}
+.resForm > div > label {
+  font-size: 16pt;
+}
+.email {
+  display: none;
+}
+.count {
+  display: flex;
+  margin: 10px;
+}
+.placeHolderSpace {
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+}
+.participant {
+  display: flex;
+  align-items: center;
+}
+.submit {
+  text-align: end;
+}
+
+.payBtn {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  position: relative;
+}
+.notice {
+  border: 1px solid black;
+  margin: 10px;
+}
+.price {
+  margin: 10px;
 }

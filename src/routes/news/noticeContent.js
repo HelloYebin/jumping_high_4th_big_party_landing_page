@@ -1,7 +1,7 @@
 import styles from "./newsStyles/noticeContent.module.css";
 import { useState } from "react";
 
-export default function NoticeContent({ title, body }) {
+export default function NoticeContent({ title, body, containerHeight }) {
   const [click, setClick] = useState(false);
 
   const clickHandle = () => {
@@ -11,7 +11,7 @@ export default function NoticeContent({ title, body }) {
     <div
       className={styles.contentContainer}
       onClick={clickHandle}
-      style={{ height: click ? "150px" : "75px" }}
+      style={{ height: click ? containerHeight : "75px" }}
     >
       <h2 className={styles.title} style={{ color: click ? "black" : "gray" }}>
         {title}
