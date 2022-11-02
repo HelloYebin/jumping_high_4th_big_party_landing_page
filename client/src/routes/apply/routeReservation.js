@@ -1,6 +1,6 @@
 import banner from "../../image/notice.png";
 import styles from "./applyStyles/routeReservation.module.css";
-import $ from "jquery";
+import jQuery from "jquery";
 import { useEffect, useState } from "react";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,6 +62,19 @@ export default function RouteReservation() {
   /* 3. 콜백 함수 정의하기(결제 완료 후)  */
   function callback(rsp) {
     if (rsp.success) {
+      // jQuery.ajax({
+      //   url: "http://localhost:8000/payment/insert",
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   data: {
+      //     name: rsp.buyer_name,
+      //     amount: rsp.amount,
+      //     phone: rsp.buyer_tel,
+      //     email: rsp.buyer_email,
+      //     paynum: rsp.imp_uid, //결제 고유번호
+      //     ordernum: rsp.merchant_uid, //주문번호
+      //   },
+      // });
       alert("결제가 완료되었습니다.");
       navigate("/");
     } else {
@@ -90,7 +103,6 @@ export default function RouteReservation() {
   if (headCount === "0") {
     setHeadCount(1);
   }
-  console.log(headCount);
   const upHandler = (event) => {
     event.preventDefault();
     setHeadCount(Number(headCount) + 1);

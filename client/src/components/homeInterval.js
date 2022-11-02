@@ -123,12 +123,10 @@ function HomeInterval() {
 
   return (
     <div className={styles.dDay}>
-      <ul className={styles.countDown}>
-        <div className={styles.welcome}>
-          {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
-        </div>
-        {loading ? timer : null}
-      </ul>
+      <div className={styles.welcome}>
+        {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
+      </div>
+      {loading ? timer : "Loading..."}
       <div className={styles.buttons}>
         <div
           className={styles.earlybirdExp}

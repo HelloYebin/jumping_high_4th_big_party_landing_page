@@ -1,45 +1,61 @@
-.rdTitle {
-  background: url(https://www.qatar2022.qa/sites/default/files/2022-07/bg-orange.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh;
+.bgContainer {
+  position: relative;
+  overflow: hidden;
 }
-.rdTitle > a {
+#image {
+  position: absolute;
+  width: 70%;
+  z-index: 2;
+  left: 45%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+#text {
   /* 글자 테두리 색 */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;
 
   /* 글자 배경색 투명 */
   mix-blend-mode: lighten;
-
+  width: 100%;
   font-weight: bolder;
-  font-size: 250px;
-  display: flex;
-  justify-content: center;
-  margin-top: 130px;
+  font-size: 200px;
   font-family: "Manru";
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  transform: translateY(-100px);
+}
+#bg {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 80vh;
+  transform: translateY(-400px) scale(1.1);
 }
 .rdContainer {
+  margin: auto;
   display: flex;
-  background-color: #e8f9fd;
+  background-color: #181818;
   flex-direction: column;
+  border-bottom: 1px solid gray;
 }
 .rdBody {
-  height: 50vh;
+  height: 90vh;
   width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 20px;
-  top: -310px;
   justify-content: center;
 }
 .content {
+  margin-top: 120px;
   display: flex;
   position: relative;
   width: 415px;
-  background-color: #181818;
+  background-color: whitesmoke;
   height: 600px;
   overflow: hidden;
   flex-direction: column;
@@ -49,13 +65,13 @@
   transform: translateY(-30px);
 }
 .content > h1 {
-  color: #e8f9fd;
+  color: #181818;
   font-family: Manru;
   letter-spacing: 1px;
   margin-left: 30px;
 }
 .content > h4 {
-  color: #e8f9fd;
+  color: #181818;
   margin-left: 30px;
 }
 .schedule {
@@ -68,10 +84,10 @@
   position: absolute;
   width: 150px;
   height: 50px;
-  color: #181818;
+  color: whitesmoke;
   font-weight: bold;
   font-size: 13pt;
-  background-color: #e8f9fd;
+  background-color: #181818;
   border: 0px solid white;
   right: 20px;
   bottom: 20px;

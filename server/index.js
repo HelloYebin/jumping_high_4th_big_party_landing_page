@@ -5,8 +5,6 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 const PORT = process.env.port || 8000;
-const multer = require("multer");
-const path = require("path");
 
 const db = mysql.createPool({
   host: "localhost",
@@ -46,6 +44,25 @@ app.post("/api/insert", (req, res) => {
     res.send("success!");
   });
 });
+
+// 결제 db 저장
+// app.post("/payment/insert", (req, res) => {
+//   const name = req.body.name;
+//   const amount = req.body.amount;
+//   const phone = req.body.phone;
+//   const email = req.body.email;
+//   const paynum = req.body.paynum;
+//   const ordernum = req.body.ordernum;
+//   const sqlQuery =
+//     "INSERT INTO participants (name,amount,phone,email,paynum,status,ordernum) VALUES(?,?,?,?,?,?,?);";
+//   db.query(
+//     sqlQuery,
+//     [name, amount, phone, email, paynum, ordernum],
+//     (err, result) => {
+//       res.send("success!");
+//     }
+//   );
+// });
 
 app.listen(PORT, () => {
   console.log(`running on port ${PORT}`);
