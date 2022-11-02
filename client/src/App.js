@@ -17,6 +17,8 @@ import RoutePressDetail from "./routes/news/routePressDetail";
 import ScrollTop from "./components/scrollTop";
 import RouteReservation from "./routes/apply/routeReservation";
 import styles from "./App.module.css";
+import AdminRouteNotice from "./routes/news/adminRouteNotice";
+import WriteForm from "./writeForm";
 
 function App() {
   return (
@@ -35,11 +37,13 @@ function App() {
             <Route path="/info/location" element={<RouteLocation />} />
             <Route path="/info/booth" element={<RouteStorage />} />
             <Route path="/news/notice" element={<RouteNotice />} />
+            <Route path="/news/notice/admin" element={<AdminRouteNotice />} />
             <Route path="/news/press" element={<RoutePress />} />
             <Route path="/news/press/:id" element={<RoutePressDetail />} />
             <Route path="/news/jumping" element={<RouteJumping />} />
             <Route path="/apply" element={<RouteApply />} />
             <Route path="/apply/reservation" element={<RouteReservation />} />
+            <Route path="/write" element={<WriteForm />} />
           </Routes>
         </div>
         <Footer />

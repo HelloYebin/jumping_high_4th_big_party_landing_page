@@ -1,0 +1,22 @@
+.contentContainer {
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: beige;
+  border-radius: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contentTitle {
+  text-align: center;
+}
+.notice {
+  margin-top: 0;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}

@@ -11,6 +11,11 @@ function HomeInterval() {
   let [minPop, setMinPop] = useState(false);
   let [hourPop, setHourPop] = useState(false);
   let [dayPop, setDayPop] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    let loadingTimer = setTimeout(() => setLoading(true), 1000);
+  }, []);
 
   const [exp, setExp] = useState(false);
   const earlybirdOverHandle = () => {
@@ -71,56 +76,58 @@ function HomeInterval() {
     }, 1000);
   }, []);
 
+  const timer = (
+    <ul className={styles.countDownTime}>
+      {dDay ? (
+        <li>
+          <div
+            className={`${styles.times} ${dayPop ? `${styles.pop}` : ""} `}
+          >{`${countDay}`}</div>
+          <span className={styles.countDownLabel}>일</span>
+        </li>
+      ) : (
+        ""
+      )}
+
+      {dDay ? (
+        <li>
+          <div
+            className={`${styles.times} ${hourPop ? `${styles.pop}` : ""} `}
+          >{`${countHour}`}</div>
+          <span className={styles.countDownLabel}>시간</span>
+        </li>
+      ) : (
+        ""
+      )}
+
+      {dDay ? (
+        <li>
+          <div
+            className={`${styles.times} ${minPop ? `${styles.pop}` : ""}`}
+          >{`${countMin}`}</div>
+          <span className={styles.countDownLabel}>분</span>
+        </li>
+      ) : (
+        ""
+      )}
+      {dDay ? (
+        <li>
+          <div className={`${styles.times} ${styles.pop}`}>{`${countSec}`}</div>
+          <span className={styles.countDownLabel}>초</span>
+        </li>
+      ) : (
+        ""
+      )}
+    </ul>
+  );
+
   return (
     <div className={styles.dDay}>
       <ul className={styles.countDown}>
         <div className={styles.welcome}>
           {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
         </div>
-        <ul className={styles.countDownTime}>
-          {dDay ? (
-            <li>
-              <div
-                className={`${styles.times} ${dayPop ? `${styles.pop}` : ""} `}
-              >{`${countDay}`}</div>
-              <span className={styles.countDownLabel}>일</span>
-            </li>
-          ) : (
-            ""
-          )}
-
-          {dDay ? (
-            <li>
-              <div
-                className={`${styles.times} ${hourPop ? `${styles.pop}` : ""} `}
-              >{`${countHour}`}</div>
-              <span className={styles.countDownLabel}>시간</span>
-            </li>
-          ) : (
-            ""
-          )}
-
-          {dDay ? (
-            <li>
-              <div
-                className={`${styles.times} ${minPop ? `${styles.pop}` : ""}`}
-              >{`${countMin}`}</div>
-              <span className={styles.countDownLabel}>분</span>
-            </li>
-          ) : (
-            ""
-          )}
-          {dDay ? (
-            <li>
-              <div
-                className={`${styles.times} ${styles.pop}`}
-              >{`${countSec}`}</div>
-              <span className={styles.countDownLabel}>초</span>
-            </li>
-          ) : (
-            ""
-          )}
-        </ul>
+        {loading ? timer : null}
       </ul>
       <div className={styles.buttons}>
         <div

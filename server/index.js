@@ -5,6 +5,8 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 const PORT = process.env.port || 8000;
+const multer = require("multer");
+const path = require("path");
 
 const db = mysql.createPool({
   host: "localhost",
