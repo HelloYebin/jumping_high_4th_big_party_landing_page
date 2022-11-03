@@ -13,18 +13,21 @@ function HomeApply() {
           <img src={footerLogo} width="300px" height="200px"></img>
         </div>
         <div className={styles.links}>
-          <Link>
+          <a href="https://www.youtube.com/c/JumpingHighKOREA" target="_blank">
             <FontAwesomeIcon icon={faYoutube} className={styles.link} />
-          </Link>
-          <Link>
+          </a>
+          <a
+            href="https://www.instagram.com/jumpinghigh_official/"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faInstagram} className={styles.link} />
-          </Link>
-          <Link>
+          </a>
+          <a href="https://blog.naver.com/jumpingkor" target="_blank">
             <FontAwesomeIcon icon={faBlog} className={styles.link} />
-          </Link>
-          <Link>
+          </a>
+          <a href="https://jumping-high.com/" target="_blank">
             <FontAwesomeIcon icon={faHouse} className={styles.link} />
-          </Link>
+          </a>
         </div>
       </div>
     </div>

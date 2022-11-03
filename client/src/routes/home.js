@@ -30,7 +30,7 @@ function Home() {
       <HomeInterval />
       <NdContainer />
       <RdContainer />
-      <ThContainer />
+      {/* <ThContainer /> */}
       <HomeSponcer />
       <HomeApply />
     </>

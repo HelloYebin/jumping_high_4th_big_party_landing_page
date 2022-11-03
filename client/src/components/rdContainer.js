@@ -23,7 +23,7 @@ function RdContainer() {
   window.addEventListener("scroll", function () {
     const value = window.scrollY;
     bgRef.current.style.top = value * 0.3 + "px";
-    textRef.current.style.top = value * 0.2 + "px";
+    textRef.current.style.top = value * 0.25 + "px";
   });
 
   return (

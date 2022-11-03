@@ -35,11 +35,29 @@ app.get("/api/get", (req, res) => {
   });
 });
 
-// db에 글 저장
+// 공지사항 TABLE에 글 저장
 app.post("/api/insert", (req, res) => {
   const title = req.body.title;
   const content = req.body.content;
   const sqlQuery = "INSERT INTO notice (title, description) VALUES (?,?)";
+  db.query(sqlQuery, [title, content], (err, result) => {
+    res.send("success!");
+  });
+});
+
+//press table data 가져오기
+app.get("/press/get", (req, res) => {
+  const sqlQuery = "SELECT * FROM press ORDER BY id DESC";
+  db.query(sqlQuery, (err, result) => {
+    res.send(result);
+  });
+});
+
+// PRESS TABLE에 글 저장
+app.post("/press/insert", (req, res) => {
+  const title = req.body.title;
+  const content = req.body.content;
+  const sqlQuery = "INSERT INTO press (title, description) VALUES (?,?)";
   db.query(sqlQuery, [title, content], (err, result) => {
     res.send("success!");
   });

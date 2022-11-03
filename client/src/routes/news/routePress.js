@@ -3,8 +3,19 @@ import banner from "../../image/notice.png";
 import styles from "./newsStyles/routePress.module.css";
 import { Link } from "react-router-dom";
 import db from "../../db/data.json";
+import { useState, useEffect } from "react";
+import Axios from "axios";
 
 export default function RoutePress() {
+  const [viewPress, setViewPress] = useState([]);
+
+  useEffect(() => {
+    Axios.get("http://localhost:8000/press/get").then((response) => {
+      setViewPress(response.data);
+    });
+  }, []);
+  console.log(viewPress);
+
   const content = db.presses.map((press) => (
     <Link
       to={`/news/press/${press.id}`}

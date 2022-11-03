@@ -11,6 +11,8 @@ export default function WriteForm() {
   const [inputTitle, setInputTitle] = useState("");
   const [textValue, setTextValue] = useState("");
   const [enters, setEnters] = useState([]);
+  const [category, setCategory] = useState("notice");
+
   const navigate = useNavigate();
 
   const handleTitle = (e) => {
@@ -20,12 +22,15 @@ export default function WriteForm() {
   const handleBody = (e) => {
     setTextValue(e);
   };
-
+  const handleOption = (e) => {
+    setCategory(e.target.value);
+  };
+  console.log(category);
   //글 등록하기
   const register = (e) => {
     const password = 1234;
     const que = prompt("비밀번호를 입력해주세요");
-    if (Number(que) === password) {
+    if (Number(que) === password && category === "notice") {
       e.preventDefault();
       Axios.post("http://localhost:8000/api/insert", {
         title: inputTitle,
@@ -33,8 +38,19 @@ export default function WriteForm() {
       }).then(() => {
         setTextValue("");
         setInputTitle("");
-        alert("등록 완료!");
+        alert("공지사항 등록 완료!");
         navigate("/news/notice/admin");
+      });
+    } else if (Number(que) === password && category === "press") {
+      e.preventDefault();
+      Axios.post("http://localhost:8000/press/insert", {
+        title: inputTitle,
+        content: textValue,
+      }).then(() => {
+        setTextValue("");
+        setInputTitle("");
+        alert("보도자료 등록 완료!");
+        navigate("/news/notice/press");
       });
     } else {
       e.preventDefault();
@@ -88,10 +104,10 @@ export default function WriteForm() {
     <div className="App">
       <form className="board" onSubmit={register}>
         <div className="boardTop">
-          <select style={{ height: "45px" }}>
-            <option>공지사항</option>
-            <option>보도자료</option>
-            <option>점핑자료</option>
+          <select style={{ height: "45px" }} onChange={handleOption}>
+            <option value="notice">공지사항</option>
+            <option value="press">보도자료</option>
+            <option value="jumping">점핑자료</option>
           </select>
           <input
             type="text"

@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import RouteNav from "../../components/routeNav";
 import banner from "../../image/notice.png";
 import styles from "./newsStyles/routeNotice.module.css";
 import NoticeContent from "./noticeContent";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import Axios from "axios";
 
 export default function AdminRouteNotice() {
   const [viewNotice, setViewNotice] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     Axios.get("http://localhost:8000/api/get").then((response) => {
@@ -45,6 +48,14 @@ export default function AdminRouteNotice() {
           body={element.description}
           delete={true}
         />
+        <button
+          style={{ right: "80px", position: "absolute" }}
+          onClick={(e) => {
+            navigate("/write");
+          }}
+        >
+          글 수정
+        </button>
         <button
           style={{ right: "10px", position: "absolute" }}
           onClick={(e) => noticeDelete(element.id, e)}
