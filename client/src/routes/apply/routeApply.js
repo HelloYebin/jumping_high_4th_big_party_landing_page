@@ -7,6 +7,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
+import reservationIcon from "../../image/reservation.png";
+import earlybirdIcon from "../../image/earlybird.png";
+
 export default function RouteApply() {
   const navigate = useNavigate();
   const clickEarly = () => {
@@ -35,17 +38,26 @@ export default function RouteApply() {
         <h1 className={styles.title}>참가신청</h1>
         <div className={styles.body}>
           <div className={styles.content} onClick={clickEarly}>
-            <FontAwesomeIcon icon={faEarlybirds} className={styles.icons} />
+            <img
+              src={earlybirdIcon}
+              width="150px"
+              className={styles.icons}
+            ></img>
             <button className={styles.buttons}>얼리버드 예약</button>
           </div>
           <div className={styles.content} onClick={clickReservation}>
-            <FontAwesomeIcon icon={faCalendarPlus} className={styles.icons} />
+            <img
+              src={reservationIcon}
+              width="150px"
+              className={styles.icons}
+            ></img>
+
             <button className={styles.buttons}>일반 예약</button>
           </div>
-          <div className={styles.content} onClick={checkReservation}>
+          {/* <div className={styles.content} onClick={checkReservation}>
             <FontAwesomeIcon icon={faCalendarCheck} className={styles.icons} />
             <button className={styles.buttons}>예약 확인</button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

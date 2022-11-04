@@ -9,10 +9,8 @@ import HomeSponcer from "../components/homeSponcer";
 import upLogo from "../image/logo.png";
 import { useState } from "react";
 function Home() {
-  const [scrollY, setScrollY] = useState(0);
   const pageUpClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setScrollY(0);
   };
 
   return (
