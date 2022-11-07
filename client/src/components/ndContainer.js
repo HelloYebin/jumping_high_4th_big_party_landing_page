@@ -1,7 +1,13 @@
 import styles from "../styles/ndContainer.module.css";
 import logo from "../image/logo.png";
+import { useState } from "react";
 
 function NdContainer() {
+  const [autoRain, setAutoRain] = useState(false);
+  setTimeout(() => {
+    setAutoRain(true);
+  }, 1000);
+
   return (
     <div className={styles.ndContainer}>
       <div className={styles.ndBack}>
@@ -13,6 +19,14 @@ function NdContainer() {
             width="400px"
             height="400px"
           />
+        </div>
+        <div className={styles.center}>
+          <a
+            className={styles.centerWord}
+            style={{ marginTop: autoRain ? "3350px" : "-2600px" }}
+          >
+            ENJOY4THBIGPARTYDAEJEONENJOY4THBIGPARTYDAEJEON
+          </a>
         </div>
         <div className={styles.ndBody}>
           <a className={styles.bodyTitle}>Welcome to BigParty</a>

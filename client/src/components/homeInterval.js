@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/homeInterval.module.css";
+import { Link } from "react-router-dom";
 
 function HomeInterval() {
   let [dDay, setDDay] = useState(true);
@@ -17,13 +18,6 @@ function HomeInterval() {
     let loadingTimer = setTimeout(() => setLoading(true), 1000);
   }, []);
 
-  const [exp, setExp] = useState(false);
-  const earlybirdOverHandle = () => {
-    setExp(true);
-  };
-  const earlybirdLeaveHandle = () => {
-    setExp(false);
-  };
   useEffect(() => {
     intervalTimer = setInterval(() => {
       //D-day 설정
@@ -128,19 +122,9 @@ function HomeInterval() {
       </div>
       {loading ? timer : "Loading..."}
       <div className={styles.buttons}>
-        <div
-          className={styles.earlybirdExp}
-          style={{ opacity: exp ? 1 : 0, left: exp ? "-220px" : "-240px" }}
-        >
-          <a>여기는 얼리버드 예약 설명 칸입니다.</a>
-        </div>
-        <button
-          onMouseOver={earlybirdOverHandle}
-          onMouseLeave={earlybirdLeaveHandle}
-        >
-          얼리버드 예약
-        </button>
-        <button>일반 예약</button>
+        <Link to="/apply">
+          <button>예약하기</button>
+        </Link>
       </div>
     </div>
   );

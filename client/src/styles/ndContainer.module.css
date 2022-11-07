@@ -1,7 +1,9 @@
 .ndContainer {
-  background-color: whitesmoke;
-  height: 50vh;
+  background-color: #181818;
+  height: 100vh;
   display: flex;
+  position: relative;
+  overflow: hidden;
 }
 .ndBack {
   width: 80%;
@@ -31,10 +33,26 @@
 }
 .bodyTitle {
   font-size: 60px;
+  margin-left: 100px;
   font-family: philosopher;
+  color: whitesmoke;
 }
 .invitation {
   margin-top: 50px;
+  margin-left: 100px;
   font-size: 20px;
   font-weight: bold;
+  color: whitesmoke;
+}
+.center {
+  color: whitesmoke;
+  width: 200px;
+}
+.centerWord {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  font-size: 180px;
+  margin-top: -2700px;
+  transition: 150s linear;
 }

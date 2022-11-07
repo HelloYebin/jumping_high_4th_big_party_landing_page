@@ -26,8 +26,6 @@ function HomeApply() {
       setScroll(false);
     }
   };
-  console.log(window.scrollY);
-
   return (
     <div className={styles.bg}>
       <div
