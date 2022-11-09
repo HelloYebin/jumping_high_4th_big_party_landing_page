@@ -1,33 +1,42 @@
 import styles from "../styles/ndContainer.module.css";
-import logo from "../image/logo.png";
-import { useState } from "react";
+import icon2 from "../image/jumping_icons_2.png";
+import rain from "../image/4th_bigparty_DAEJEON.png";
+import { useState, useEffect } from "react";
 
 function NdContainer() {
   const [autoRain, setAutoRain] = useState(false);
-  setTimeout(() => {
-    setAutoRain(true);
-  }, 1000);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAutoRain(true);
+    }, 1000);
+  }, []);
 
   return (
     <div className={styles.ndContainer}>
       <div className={styles.ndBack}>
+        <div className={styles.slider}>
+          <p className={styles.slide}>
+            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+          </p>
+          <p className={styles.slide}>
+            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+          </p>
+          <p className={styles.slide}>
+            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+          </p>
+        </div>
+
         {/* 빅파티 로고 */}
         <div className={styles.ndLogoContainer}>
           <img
             className={styles.ndLogo}
-            src={logo}
+            src={icon2}
             width="400px"
             height="400px"
           />
         </div>
-        <div className={styles.center}>
-          <a
-            className={styles.centerWord}
-            style={{ marginTop: autoRain ? "3350px" : "-2600px" }}
-          >
-            ENJOY4THBIGPARTYDAEJEONENJOY4THBIGPARTYDAEJEON
-          </a>
-        </div>
+
         <div className={styles.ndBody}>
           <a className={styles.bodyTitle}>Welcome to BigParty</a>
           <p className={styles.invitation}>

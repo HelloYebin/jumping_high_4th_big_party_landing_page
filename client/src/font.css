@@ -16,3 +16,8 @@
   font-weight: bold;
   src: url("./fonts/Philosopher-Bold.ttf");
 }
+@font-face {
+  font-family: helv;
+  font-weight: bold;
+  src: url("./fonts/Helvetica.ttf");
+}

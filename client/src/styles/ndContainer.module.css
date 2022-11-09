@@ -1,6 +1,6 @@
 .ndContainer {
   background-color: #181818;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -44,15 +44,32 @@
   font-weight: bold;
   color: whitesmoke;
 }
-.center {
-  color: whitesmoke;
-  width: 200px;
-}
-.centerWord {
+
+.slider {
+  display: flex;
   position: absolute;
+  width: 2000%;
+  height: 130px;
+  transform-origin: top left;
+  animation: rain 65s linear infinite;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
   left: 50%;
-  transform: translateX(-50%) rotate(-90deg);
-  font-size: 180px;
-  margin-top: -2700px;
-  transition: 150s linear;
+
+  /* 글자 배경색 투명 */
+  mix-blend-mode: lighten;
+}
+@keyframes rain {
+  from {
+    transform: rotate(270deg) translateX(-1955px) translateY(-50%);
+  }
+  to {
+    transform: rotate(270deg) translateX(-6437px) translateY(-50%);
+  }
+}
+.slide {
+  font-size: 150px;
+  display: flex;
+  font-family: Manru;
+  transform: translateY(-200px);
 }

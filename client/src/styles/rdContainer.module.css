@@ -24,7 +24,7 @@
   position: absolute;
   z-index: 1;
   text-align: center;
-  transform: translateY(-120px);
+  transform: translateY(-250px);
 }
 #bg {
   position: relative;

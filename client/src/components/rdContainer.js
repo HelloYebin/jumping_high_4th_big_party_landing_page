@@ -1,5 +1,6 @@
 import styles from "../styles/rdContainer.module.css";
 import schedule from "../image/schedule.png";
+import booth from "../image/booth.png";
 import image from "../image/main-s1.png";
 import bg from "../image/redb.png";
 import Map from "../components/map";
@@ -44,7 +45,6 @@ function RdContainer() {
             height="270px"
             src={schedule}
           />
-
           <a>
             <button className={styles.detail} onClick={scheduleDetail}>
               자세히보기
@@ -65,7 +65,12 @@ function RdContainer() {
         </div>
         <div className={styles.content}>
           <h1>부스 안내</h1>
-          <Map />
+          <img
+            className={styles.schedule}
+            width="350px"
+            height="270px"
+            src={booth}
+          />
           <h4>
             주소 : 서울특별시 ~~ <br />
             주차장 : 서울특별시 ~~
@@ -76,7 +81,7 @@ function RdContainer() {
             target={"_blank"}
             style={{ color: "white", textDecoration: "none" }}
           >
-            <button className={styles.detail}>지도보기</button>
+            <button className={styles.detail}>자세히보기</button>
           </a>
         </div>
       </div>
