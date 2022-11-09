@@ -24,14 +24,14 @@
   position: absolute;
   z-index: 1;
   text-align: center;
-  transform: translateY(-250px);
+  transform: translateY(-350px);
 }
 #bg {
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 80vh;
   transform: translateY(-400px) scale(1.1);
+  height: 100vh;
 }
 .rdContainer {
   margin: auto;

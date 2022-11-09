@@ -1,15 +1,16 @@
 import styles from "../styles/rdContainer.module.css";
 import schedule from "../image/schedule.png";
-import booth from "../image/booth.png";
+import booth from "../image/booth1.png";
 import image from "../image/main-s1.png";
 import bg from "../image/redb.png";
 import Map from "../components/map";
 import { useRef, useState } from "react";
-import ScheduleModal from "./scheduleModal";
+import Modal from "./modal";
 import "../font.css";
 
 function RdContainer() {
   const [modal, setModal] = useState(false);
+  const [mode, setMode] = useState("");
   const imageRef = useRef();
   const textRef = useRef();
   const bgRef = useRef();
@@ -19,12 +20,18 @@ function RdContainer() {
 
   const scheduleDetail = () => {
     setModal(true);
+    setMode("schedule");
+  };
+
+  const boothDetail = () => {
+    setModal(true);
+    setMode("booth");
   };
 
   window.addEventListener("scroll", function () {
     const value = window.scrollY;
     bgRef.current.style.top = value * 0.3 + "px";
-    textRef.current.style.top = value * 0.25 + "px";
+    textRef.current.style.top = value * 0.33 + "px";
   });
 
   return (
@@ -45,6 +52,7 @@ function RdContainer() {
             height="270px"
             src={schedule}
           />
+          <h4>여기는 프로그램 일정 입니다.</h4>
           <a>
             <button className={styles.detail} onClick={scheduleDetail}>
               자세히보기
@@ -71,21 +79,16 @@ function RdContainer() {
             height="270px"
             src={booth}
           />
-          <h4>
-            주소 : 서울특별시 ~~ <br />
-            주차장 : 서울특별시 ~~
-          </h4>
+          <h4>여기는 부스 설명란입니다.</h4>
 
-          <a
-            href="https://map.kakao.com/?itemId=26785200"
-            target={"_blank"}
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            <button className={styles.detail}>자세히보기</button>
+          <a>
+            <button className={styles.detail} onClick={boothDetail}>
+              자세히보기
+            </button>
           </a>
         </div>
       </div>
-      {modal ? <ScheduleModal changeModal={changeModal} /> : ""}
+      {modal ? <Modal changeModal={changeModal} mode={mode} /> : ""}
     </div>
   );
 }

@@ -14,29 +14,19 @@ function NdContainer() {
 
   return (
     <div className={styles.ndContainer}>
-      <div className={styles.ndBack}>
-        <div className={styles.slider}>
-          <p className={styles.slide}>
-            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
-          </p>
-          <p className={styles.slide}>
-            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
-          </p>
-          <p className={styles.slide}>
-            — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
-          </p>
-        </div>
+      <div className={styles.slider}>
+        <p className={styles.slide}>
+          — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+        </p>
+        <p className={styles.slide}>
+          — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+        </p>
+        <p className={styles.slide}>
+          — 4TH — BIGPARTY — JUMPING — FESTIVAL — DAEJEON&nbsp;
+        </p>
+      </div>
 
-        {/* 빅파티 로고 */}
-        <div className={styles.ndLogoContainer}>
-          <img
-            className={styles.ndLogo}
-            src={icon2}
-            width="400px"
-            height="400px"
-          />
-        </div>
-
+      <div className={styles.wrapper}>
         <div className={styles.ndBody}>
           <a className={styles.bodyTitle}>Welcome to BigParty</a>
           <p className={styles.invitation}>
@@ -51,6 +41,15 @@ function NdContainer() {
             체험하고 즐길 수 있는 장을 마련하였습니다.
             <br />
           </p>
+        </div>
+        {/* 빅파티 로고 */}
+        <div className={styles.ndLogoContainer}>
+          <img
+            className={styles.ndLogo}
+            src={icon2}
+            width="400px"
+            height="400px"
+          />
         </div>
       </div>
     </div>
