@@ -1,51 +1,50 @@
 .sponcerContainer {
-  background-color: #2d4263;
-  height: 40vh;
+  background-color: #ffffff;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
 }
 .bg {
   width: 80%;
   position: relative;
   left: 50%;
+  height: 100%;
   transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
-.logos {
-  height: 50%;
-}
-.logos > h1 {
-  text-align: center;
+.title {
   font-family: "Manru";
-  margin-top: 50px;
-  color: whitesmoke;
+  color: #181818;
+  font-size: 45px;
   letter-spacing: 10px;
+}
+.title > h1 {
+  margin: 10px;
 }
 .sponcers {
   display: flex;
   padding-left: 0;
-  justify-content: space-around;
-  margin-top: 70px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: end;
+  border-right: 1px solid #eee;
+  margin-left: 10px;
 }
-.sponcer {
-  border: 1px solid white;
-  width: 200px;
-  height: 100px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  transition: 0.2s;
+.sponcers li {
+  list-style: none;
+  border-top: 1px solid #eee;
+
+  border-left: 1px solid #eee;
+  width: 28.2%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.sponcer:hover {
-  transform: scale(1.1);
-}
-.logo_jumpingKorea {
+.sponcers li img {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  align-items: center;
-  opacity: 0.6;
-  transition: 0.4s;
 }
-.logo_jumpingKorea:hover {
-  opacity: 1;
+.bottomLine {
+  border-bottom: 1px solid #eee;
 }

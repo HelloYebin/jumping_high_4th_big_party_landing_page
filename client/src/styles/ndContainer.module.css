@@ -22,7 +22,7 @@
 }
 .ndLogo {
   position: relative;
-  animation: rotate 2s linear infinite;
+  animation: rotate 4s ease-in-out infinite;
 }
 @keyframes rotate {
   from {
@@ -43,11 +43,13 @@
   font-size: 60px;
   font-family: philosopher;
   color: whitesmoke;
+  transition: 0.5s;
 }
 .invitation {
   font-size: 20px;
   font-weight: bold;
   color: whitesmoke;
+  transition: 0.5s;
 }
 
 .slider {

@@ -4,10 +4,12 @@ import HomeInterval from "../components/homeInterval";
 import NdContainer from "../components/ndContainer";
 import RdContainer from "../components/rdContainer";
 import ThContainer from "../components/thContainer";
-import HomeApply from "../components/homeApply";
+import HomeFooter from "../components/homeFooter";
 import HomeSponcer from "../components/homeSponcer";
-import upLogo from "../image/logo.png";
-import { useState } from "react";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import ThContainer from "../components/thContainer";
+
 function Home() {
   const pageUpClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -16,7 +18,7 @@ function Home() {
   return (
     <>
       <div className={styles.upLogo} onClick={pageUpClick}>
-        <img src={upLogo} width="60px" height="40px" />
+        <FontAwesomeIcon icon={faChevronUp} />
       </div>
       {/* <Video /> */}
       <div className={styles.container}>
@@ -28,9 +30,9 @@ function Home() {
       <HomeInterval />
       <NdContainer />
       <RdContainer />
-      {/* <ThContainer /> */}
+      <ThContainer />
       <HomeSponcer />
-      <HomeApply />
+      <HomeFooter />
     </>
   );
 }

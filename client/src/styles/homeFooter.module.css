@@ -11,6 +11,9 @@
   width: 100%;
   z-index: 0;
   transition: 0.6s;
+  position: fixed;
+  bottom: 200px;
+  z-index: 0;
 }
 .logos {
   padding-left: 0;
@@ -46,45 +49,10 @@
 .link:hover {
   color: red;
 }
-/* .apply {
-  width: 80%;
-  position: relative;
+.copyright {
+  color: whitesmoke;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
+  bottom: 50px;
 }
-.apply {
-  height: 50%;
-}
-.apply > h1 {
-  text-align: center;
-  font-family: "Manru";
-  margin-top: 30px;
-  color: whitesmoke;
-  letter-spacing: 10px;
-}
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 90px;
-}
-.buttons > button {
-  background-color: #e8f9fd;
-  border: 1px solid white;
-  color: black;
-  width: 250px;
-  height: 100px;
-}
-.earlybirdExp {
-  width: 300px;
-  height: 100px;
-  background-color: black;
-  position: absolute;
-  transition: 0.4s;
-  border: 1px solid white;
-}
-.earlybirdExp > a {
-  color: white;
-} */

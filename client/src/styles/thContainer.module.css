@@ -1,33 +1,69 @@
 .thContainer {
-  background-color: #181818;
-  height: 80vh;
+  margin: auto;
   display: flex;
+  background-color: #181818;
+  flex-direction: column;
+  z-index: 10;
+  position: relative;
 }
-.thBack {
+.thBody {
+  height: 90vh;
   width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
-.content > img {
+.content {
+  margin-top: 120px;
+  display: flex;
+  position: relative;
+  width: 415px;
+  background-color: whitesmoke;
+  height: 600px;
+  overflow: hidden;
+  flex-direction: column;
   transition-duration: 0.2s;
 }
-.content > img:hover {
-  transform: scale(1.1);
+.content:hover {
+  transform: translateY(-30px);
 }
 .content > h1 {
-  z-index: 10;
-  color: white;
-  background-color: black;
-  position: absolute;
-  font-family: "Manru";
-  font-size: 50px;
-  letter-spacing: 8px;
-  left: 10px;
-  padding-left: 10px;
+  color: #181818;
+  font-family: Manru;
+  letter-spacing: 1px;
+  margin-left: 30px;
 }
-.contentContainer {
-  height: 32%;
-  overflow: hidden;
-  margin-top: 8px;
+.content > h4 {
+  color: #181818;
+  margin-left: 30px;
+}
+.schedule {
+  margin-top: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.detail {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 13pt;
+  background-color: #181818;
+  border: 0px solid white;
+  right: 20px;
+  bottom: 20px;
+}
+.map {
+  margin-top: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.content > a > button {
+  cursor: pointer;
 }

@@ -5,57 +5,40 @@ function HomeSponcer() {
   return (
     <div className={styles.sponcerContainer}>
       <div className={styles.bg}>
-        <div className={styles.logos}>
+        <span className={styles.title}>
+          <h1>BIGPARTY</h1>
+          <h1>WITH</h1>
           <h1>SPONCER</h1>
+        </span>
+        <div className={styles.logos}>
           <ul className={styles.sponcers}>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
-            <div className={styles.sponcer}>
-              <img
-                src={jumpingKorea}
-                width="80%"
-                height="80%"
-                className={styles.logo_jumpingKorea}
-              ></img>
-            </div>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li className={styles.bottomLine}>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li className={styles.bottomLine}>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
+            <li className={styles.bottomLine}>
+              <img src={jumpingKorea} width="140px"></img>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,16 +1,33 @@
 import styles from "../styles/ndContainer.module.css";
 import icon2 from "../image/jumping_icons_2.png";
-import rain from "../image/4th_bigparty_DAEJEON.png";
 import { useState, useEffect } from "react";
 
 function NdContainer() {
-  const [autoRain, setAutoRain] = useState(false);
+  const [scroll, setScroll] = useState(false);
+  const [bodyScroll, setBodyScroll] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setAutoRain(true);
-    }, 1000);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll); //clean up
+    };
   }, []);
+
+  const handleScroll = () => {
+    // 스크롤이 Top에서 3300px 이상 내려오면 true값을 useState에 넣어줌
+    if (window.scrollY >= 600) {
+      setScroll(true);
+    } else if (window.scrollY < 600) {
+      // 스크롤이 50px 미만일경우 false를 넣어줌
+      setScroll(false);
+    }
+
+    if (window.scrollY >= 800) {
+      setBodyScroll(true);
+    } else if (window.scrollY < 800) {
+      setBodyScroll(false);
+    }
+  };
 
   return (
     <div className={styles.ndContainer}>
@@ -28,8 +45,22 @@ function NdContainer() {
 
       <div className={styles.wrapper}>
         <div className={styles.ndBody}>
-          <a className={styles.bodyTitle}>Welcome to BigParty</a>
-          <p className={styles.invitation}>
+          <a
+            className={styles.bodyTitle}
+            style={{
+              transform: scroll ? `translateY(0)` : `translateY(100px)`,
+              opacity: scroll ? "1" : "0",
+            }}
+          >
+            Welcome to BigParty
+          </a>
+          <p
+            className={styles.invitation}
+            style={{
+              transform: bodyScroll ? `translateY(0)` : `translateY(100px)`,
+              opacity: bodyScroll ? "1" : "0",
+            }}
+          >
             Jumping Festa, 점핑하이에 초대합니다! 어느덧 점핑하이가 !! <br />
             주년이 되었고… 빅파티도 ,, 되었는데 더 많은 분들과 건강한 일상의
             공유를 해… <br />
@@ -46,6 +77,7 @@ function NdContainer() {
         <div className={styles.ndLogoContainer}>
           <img
             className={styles.ndLogo}
+            alt="logo"
             src={icon2}
             width="400px"
             height="400px"

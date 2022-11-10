@@ -31,7 +31,7 @@ html {
   height: 70px;
   right: 30px;
   z-index: 15;
-  background-color: #2d4263;
+  background-color: #181818;
   bottom: 30px;
   border-radius: 50%;
   display: flex;
@@ -39,4 +39,6 @@ html {
   align-items: center;
   border: 3px solid white;
   cursor: pointer;
+  color: white;
+  font-size: 40px;
 }
