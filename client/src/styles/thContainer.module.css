@@ -1,10 +1,10 @@
 .thContainer {
   margin: auto;
   display: flex;
-  background-color: #181818;
   flex-direction: column;
   z-index: 10;
   position: relative;
+  transition: 0.5s;
 }
 .thBody {
   height: 90vh;

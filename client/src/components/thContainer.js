@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/thContainer.module.css";
 import Map from "../components/map";
 import schedule from "../image/schedule.png";
@@ -8,6 +8,7 @@ import Modal from "./modal";
 function ThContainer() {
   const [modal, setModal] = useState(false);
   const [mode, setMode] = useState("");
+  const [scroll, setScroll] = useState(false);
   const scheduleDetail = () => {
     setModal(true);
     setMode("schedule");
@@ -21,8 +22,28 @@ function ThContainer() {
     setModal(value);
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll); //clean up
+    };
+  }, []);
+
+  const handleScroll = () => {
+    // 스크롤이 Top에서 3300px 이상 내려오면 true값을 useState에 넣어줌
+    if (window.scrollY >= 3300) {
+      setScroll(true);
+    } else if (window.scrollY < 3300) {
+      // 스크롤이 50px 미만일경우 false를 넣어줌
+      setScroll(false);
+    }
+  };
+
   return (
-    <div className={styles.thContainer}>
+    <div
+      className={styles.thContainer}
+      style={{ backgroundColor: scroll ? "white" : "#181818" }}
+    >
       <div className={styles.thBody}>
         <div className={styles.content}>
           <h1>프로그램일정</h1>

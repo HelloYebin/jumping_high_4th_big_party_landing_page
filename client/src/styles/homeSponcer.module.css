@@ -1,8 +1,9 @@
 .sponcerContainer {
-  background-color: #ffffff;
-  height: 80vh;
+  background-color: #181818;
+  height: 120vh;
   position: relative;
   z-index: 1;
+  transition: 0.5s;
 }
 .bg {
   width: 80%;
@@ -11,13 +12,14 @@
   height: 100%;
   transform: translateX(-50%);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 .title {
   font-family: "Manru";
   color: #181818;
   font-size: 45px;
   letter-spacing: 10px;
+  margin-bottom: 140px;
 }
 .title > h1 {
   margin: 10px;
@@ -30,6 +32,7 @@
   justify-content: end;
   border-right: 1px solid #eee;
   margin-left: 10px;
+  margin-bottom: 100px;
 }
 .sponcers li {
   list-style: none;
