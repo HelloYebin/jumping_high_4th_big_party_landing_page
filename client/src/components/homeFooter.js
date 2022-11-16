@@ -1,34 +1,16 @@
 import styles from "../styles/homeFooter.module.css";
-import { useEffect, useState } from "react";
+
 import footerLogo from "../image/logo.png";
 import { faHouse, faBlog } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-function HomeApply() {
-  const [scroll, setScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll); //clean up
-    };
-  }, []);
-
-  const handleScroll = () => {
-    // 스크롤이 Top에서 3300px 이상 내려오면 true값을 useState에 넣어줌
-    if (window.scrollY >= 3300) {
-      setScroll(true);
-    } else {
-      // 스크롤이 50px 미만일경우 false를 넣어줌
-      setScroll(false);
-    }
-  };
+function HomeApply({ dissolve }) {
   return (
     <div className={styles.bg}>
       <div
         className={styles.applyContainer}
         style={{
-          opacity: scroll ? "1" : "0",
+          opacity: dissolve ? "1" : "0",
         }}
       >
         <div className={styles.logos}>
@@ -68,7 +50,7 @@ function HomeApply() {
       <a
         className={styles.copyright}
         style={{
-          opacity: scroll ? "1" : "0",
+          opacity: dissolve ? "1" : "0",
         }}
       >
         JUMPINGHIGH © 2014. All Rights Reserved.

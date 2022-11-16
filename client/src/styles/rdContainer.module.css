@@ -1,43 +1,79 @@
-.rdContainer {
-  margin: auto;
-  display: flex;
+.horizontalSection {
   background-color: #181818;
-  flex-direction: column;
-  z-index: 10;
-  position: relative;
 }
-.bgContainer {
-  position: relative;
+.stickyWrapper {
+  width: 100%;
   overflow: hidden;
+  position: sticky;
+  top: 10px;
 }
-#image {
-  position: absolute;
-  width: 70%;
-  z-index: 2;
-  left: 45%;
-  transform: translateX(-50%);
-  bottom: 0;
-}
-#text {
-  /* 글자 테두리 색 */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white;
-
-  /* 글자 배경색 투명 */
-  mix-blend-mode: lighten;
-  width: 100%;
-  font-weight: bolder;
-  font-size: 200px;
-  font-family: "Manru";
-  position: absolute;
-  z-index: 1;
-  text-align: center;
-  transform: translateY(200px) translateX(-1000px);
-}
-#bg {
+.elementWrapper {
   position: relative;
-  z-index: 0;
-  width: 100%;
-  transform: translateY(-600px) scale(1.1);
-  height: 80vh;
+  display: flex;
+}
+.element {
+  width: 100vw;
+  height: 98vh;
+  background-color: #181818;
+  flex-shrink: 0;
+  color: white;
+  margin: 0 20px 0 0;
+  padding-left: 50px;
+}
+
+.element:nth-child(1) {
+  background-color: aquamarine;
+}
+.element:nth-child(2) {
+  background-color: #181818;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.element:nth-child(3) {
+  background-color: crimson;
+}
+
+.past {
+  display: flex;
+}
+
+.past > div {
+  flex-grow: 1;
+  padding-bottom: 100px;
+  margin-top: 30px;
+}
+.pastTitle {
+  transition: 0.3s;
+}
+.pastBody {
+  position: relative;
+}
+.firPic {
+  transition: 0.3s;
+}
+.secPic {
+  transition: 0.3s;
+  position: absolute;
+  top: 100px;
+  left: 250px;
+}
+.firPic2017 {
+  transition: 0.3s;
+}
+.secPic2017 {
+  transition: 0.3s;
+  position: absolute;
+  top: -150px;
+  left: 400px;
+}
+.secondBigParty {
+  transform: translateY(100%) translateX(-30%);
+}
+.thirdBigParty {
+  transform: translateX(-10%);
+}
+.whiteTranpoline {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
