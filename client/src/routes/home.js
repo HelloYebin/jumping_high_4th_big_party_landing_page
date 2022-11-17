@@ -22,22 +22,12 @@ function Home() {
   // 가로스크롤
   const [rdFromTop, setRdFromTop] = useState(0);
   const [rdHorizonValue, setRdHorizonValue] = useState(0);
-  const [getRdHorizontalLength, setGetRdHorizontalLength] = useState("");
+  const [getRdData, setGetRdData] = useState({ width: null, height: null });
   const windowWidth = window.innerWidth;
-  const scrollDistance = rdFromTop + getRdHorizontalLength - windowWidth;
+  const scrollDistance = rdFromTop + getRdData.width - windowWidth;
 
-  //가로스크롤 콘텐츠
-  const [pastValue, setPastValue] = useState({
-    firTitle: false,
-    firBody: false,
-    firBodyNext: false,
-    secTitle: false,
-    secBody: false,
-    secBodyNext: false,
-    rdTitle: false,
-    rdBody: false,
-    rdBodyNext: false,
-  });
+  //svg 시작점
+  const [rdSvg, setRdSvg] = useState({ line: null, content: null });
 
   useEffect(() => {
     setThFromTop(thRef.current.offsetTop + thRef.current.scrollHeight / 2);
@@ -49,60 +39,7 @@ function Home() {
 
   window.onscroll = () => {
     let scrollTop = window.scrollY;
-
-    //past 첫번째 컨텐츠
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 5) {
-      setPastValue((prev) => ({ ...prev, firTitle: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, firTitle: false }));
-    }
-
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 5 + 150) {
-      setPastValue((prev) => ({ ...prev, firBody: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, firBody: false }));
-    }
-
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 5 + 250) {
-      setPastValue((prev) => ({ ...prev, firBodyNext: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, firBodyNext: false }));
-    }
-    console.log(pastValue.firBodyNext);
-    //past 두번째 컨텐츠
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 3.3) {
-      setPastValue((prev) => ({ ...prev, secTitle: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, secTitle: false }));
-    }
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 3.3 + 150) {
-      setPastValue((prev) => ({ ...prev, secBody: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, secBody: false }));
-    }
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 3.3 + 250) {
-      setPastValue((prev) => ({ ...prev, secBodyNext: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, secBodyNext: false }));
-    }
-    //past 세번째 컨텐츠
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 2.5) {
-      setPastValue((prev) => ({ ...prev, rdTitle: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, rdTitle: false }));
-    }
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 2.5 + 150) {
-      setPastValue((prev) => ({ ...prev, rdBody: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, rdBody: false }));
-    }
-    if (scrollTop >= rdFromTop + getRdHorizontalLength / 2.5 + 250) {
-      setPastValue((prev) => ({ ...prev, rdBodyNext: true }));
-    } else {
-      setPastValue((prev) => ({ ...prev, rdBodyNext: false }));
-    }
-    console.log(scrollTop);
-    console.log("rdFromTop : ", rdFromTop + getRdHorizontalLength / 2.5);
+    console.log(rdSvg, "scrollTop : ", scrollTop, "rdFromTop", rdFromTop);
     //th->footer 넘어갈때 배경 디졸브
     if (scrollTop >= thFromTop) {
       setThScroll(true);
@@ -115,10 +52,22 @@ function Home() {
     } else {
       setFooterScroll(false);
     }
-
     //가로스크롤 값구하기
     if (scrollTop >= rdFromTop && scrollTop <= scrollDistance) {
       setRdHorizonValue(scrollTop - rdFromTop);
+    }
+
+    //paint svg
+    if (scrollTop > rdFromTop - getRdData.height / 2.5) {
+      setRdSvg((prev) => ({ ...prev, line: true }));
+    } else {
+      setRdSvg((prev) => ({ ...prev, line: false }));
+    }
+
+    if (scrollTop >= rdFromTop - 200) {
+      setRdSvg((prev) => ({ ...prev, content: true }));
+    } else {
+      setRdSvg((prev) => ({ ...prev, content: false }));
     }
   };
 
@@ -141,10 +90,10 @@ function Home() {
       <NdContainer />
       <div ref={rdRef}>
         <RdContainer
-          getData={setGetRdHorizontalLength}
-          getRdHorizontalLength={getRdHorizontalLength}
+          getData={setGetRdData}
+          getRdData={getRdData}
           rdHorizonValue={rdHorizonValue}
-          pastValue={pastValue}
+          rdSvg={rdSvg}
         />
       </div>
       <div ref={thRef}>

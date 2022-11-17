@@ -10,7 +10,7 @@ function HomeApply({ dissolve }) {
       <div
         className={styles.applyContainer}
         style={{
-          opacity: dissolve ? "1" : "0",
+          display: dissolve ? "" : "none",
         }}
       >
         <div className={styles.logos}>

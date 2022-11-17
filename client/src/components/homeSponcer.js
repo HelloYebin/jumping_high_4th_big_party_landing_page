@@ -1,6 +1,5 @@
 import styles from "../styles/homeSponcer.module.css";
 import jumpingKorea from "../image/logo.png";
-import { useState, useEffect } from "react";
 
 function HomeSponcer({ dissolve }) {
   return (

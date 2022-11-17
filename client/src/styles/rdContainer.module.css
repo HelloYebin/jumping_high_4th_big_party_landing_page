@@ -19,61 +19,89 @@
   color: white;
   margin: 0 20px 0 0;
   padding-left: 50px;
+  z-index: 10;
 }
 
 .element:nth-child(1) {
-  background-color: aquamarine;
+  background-color: #181818;
 }
 .element:nth-child(2) {
   background-color: #181818;
   padding-left: 40px;
   padding-right: 40px;
 }
-.element:nth-child(3) {
+.element:nth-child(4) {
   background-color: crimson;
 }
-
-.past {
+.pastBg {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pastBg > span {
+  font-size: 300px;
+  font-family: Manru;
+  color: #2b2a2a;
+}
+.image {
+  height: 300px;
+  width: 500px;
+}
+.pastWrapper {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.content > h4 {
+  text-align: end;
+}
+.curveSvg {
+  fill: none;
+  stroke-width: 5px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.svgPath {
+  stroke: whitesmoke;
+  stroke-dasharray: 2150;
+  transition: 1s;
+  position: absolute;
 }
 
-.past > div {
-  flex-grow: 1;
-  padding-bottom: 100px;
+/* 점핑의 역사 */
+.items {
+  position: relative;
+  height: 90%;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+}
+.desc {
+  margin-top: 50px;
+  justify-content: center;
+}
+.item ul {
+  list-style: none;
+}
+.descTop {
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.itemTop {
+  display: flex;
+  position: relative;
+  width: 50%;
+  justify-content: space-around;
+  margin-left: 50px;
   margin-top: 30px;
-}
-.pastTitle {
-  transition: 0.3s;
-}
-.pastBody {
-  position: relative;
-}
-.firPic {
-  transition: 0.3s;
-}
-.secPic {
-  transition: 0.3s;
-  position: absolute;
-  top: 100px;
-  left: 250px;
-}
-.firPic2017 {
-  transition: 0.3s;
-}
-.secPic2017 {
-  transition: 0.3s;
-  position: absolute;
-  top: -150px;
-  left: 400px;
-}
-.secondBigParty {
-  transform: translateY(100%) translateX(-30%);
-}
-.thirdBigParty {
-  transform: translateX(-10%);
-}
-.whiteTranpoline {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
 }
