@@ -3,10 +3,10 @@
   width: 100%;
   position: fixed;
   z-index: 10;
-  border-bottom: 1px solid white;
   mix-blend-mode: hard-light;
   top: 0px;
   transition: 0.4s;
+  display: flex;
 }
 .headerContainer:hover {
   background-color: #181818;
@@ -18,7 +18,7 @@
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
+  width: 70%;
   display: flex;
   align-items: center;
 }
@@ -27,19 +27,50 @@
   display: flex;
   list-style: none;
   padding-left: 0;
-  position: relative;
   width: 100%;
   justify-content: flex-end;
+  top: 0px;
+  vertical-align: top;
+  position: absolute;
 }
-.headerList > li {
-  margin-left: 40px;
+.lists {
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
+  width: 150px;
 }
+
 .toApply {
   color: white;
   text-decoration: none;
 }
 .toApply > p:hover {
   color: white;
+}
+.headerList > li:hover > .dep2 {
+  display: block;
+  background-color: #181818;
+}
+.bigpartyDetail {
+  background-color: #181818;
+  color: white;
+  list-style: none;
+  padding-left: 0;
+}
+.dep2 > li {
+  padding: 10px;
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  font-weight: normal;
+}
+.dep2 {
+  padding-left: 0;
+  display: none;
+  transition: 1s;
+}
+.logo {
+  margin-left: 50px;
+  margin-top: 10px;
 }

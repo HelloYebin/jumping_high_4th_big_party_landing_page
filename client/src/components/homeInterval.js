@@ -71,7 +71,7 @@ function HomeInterval() {
   }, []);
 
   const timer = (
-    <ul className={styles.countDownTime}>
+    <ul className={styles.countDownTime} style={{ opacity: loading ? 1 : 0 }}>
       {dDay ? (
         <li>
           <div
@@ -120,8 +120,8 @@ function HomeInterval() {
       <div className={styles.welcome}>
         {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
       </div>
-      {loading ? timer : "Loading..."}
-      <div className={styles.buttons}>
+      {timer}
+      <div className={styles.buttons} style={{ opacity: loading ? 1 : 0 }}>
         <Link to="/apply">
           <button>예약하기</button>
         </Link>

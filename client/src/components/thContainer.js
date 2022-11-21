@@ -28,7 +28,10 @@ function ThContainer({ dissolve }) {
       style={{ backgroundColor: dissolve ? "white" : "#181818" }}
     >
       <div className={styles.thBody}>
-        <div className={styles.content}>
+        <div
+          className={styles.content}
+          style={{ backgroundColor: dissolve ? "#181818" : "white" }}
+        >
           <h1>프로그램일정</h1>
           <img
             className={styles.schedule}
@@ -43,7 +46,10 @@ function ThContainer({ dissolve }) {
             </button>
           </a>
         </div>
-        <div className={styles.content}>
+        <div
+          className={styles.content}
+          style={{ backgroundColor: dissolve ? "#181818" : "white" }}
+        >
           <h1>행사장위치</h1>
           <Map />
           <h4>주소 : 대전 서구 둔산대로 169</h4>
@@ -56,7 +62,10 @@ function ThContainer({ dissolve }) {
             <button className={styles.detail}>지도보기</button>
           </a>
         </div>
-        <div className={styles.content}>
+        <div
+          className={styles.content}
+          style={{ backgroundColor: dissolve ? "#181818" : "white" }}
+        >
           <h1>부스 안내</h1>
           <img
             className={styles.schedule}

@@ -38,12 +38,17 @@ export default function Header() {
       onMouseLeave={leaveHandle}
       style={{ top: scroll ? "-70px" : "0px", opacity: scroll ? "0" : "1" }}
     >
+      <Link to="/">
+        <img
+          src={headerLogo}
+          width="120px"
+          height="80px"
+          className={styles.logo}
+        />
+      </Link>
       <div className={styles.headerContent}>
-        <Link to="/">
-          <img src={headerLogo} width="120px" height="80px" />
-        </Link>
         <ul className={styles.headerList}>
-          <li>
+          <li className={styles.lists}>
             <Link
               to="/intro/summary"
               className={styles.toApply}
@@ -51,8 +56,13 @@ export default function Header() {
             >
               <p>점핑빅파티</p>
             </Link>
+            <ul className={styles.dep2}>
+              <li>행사 개요</li>
+              <li>행사 히스토리</li>
+              <li>초대의 글</li>
+            </ul>
           </li>
-          <li>
+          <li className={styles.lists}>
             <Link
               to="/info/schedule"
               className={styles.toApply}
@@ -60,8 +70,14 @@ export default function Header() {
             >
               <p>행사안내</p>
             </Link>
+            <ul className={styles.dep2}>
+              <li>프로그램 일정</li>
+              <li>참가자 준비물</li>
+              <li>행사장 위치</li>
+              <li>부스 안내</li>
+            </ul>
           </li>
-          <li>
+          <li className={styles.lists}>
             <Link
               to="/news/notice"
               className={styles.toApply}
@@ -69,8 +85,13 @@ export default function Header() {
             >
               <p>행사소식</p>
             </Link>
+            <ul className={styles.dep2}>
+              <li>공지사항</li>
+              <li>보도자료</li>
+              <li>점핑자료</li>
+            </ul>
           </li>
-          <li>
+          <li className={styles.lists}>
             <Link
               to="/apply"
               className={styles.toApply}

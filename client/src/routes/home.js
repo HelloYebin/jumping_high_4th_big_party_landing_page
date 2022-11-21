@@ -6,6 +6,7 @@ import RdContainer from "../components/rdContainer";
 import ThContainer from "../components/thContainer";
 import HomeFooter from "../components/homeFooter";
 import HomeSponcer from "../components/homeSponcer";
+import Loading from "./../components/loading";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
@@ -18,6 +19,7 @@ function Home() {
   const [thFromTop, setThFromTop] = useState(0);
   const [thScroll, setThScroll] = useState(false);
   const [footerScroll, setFooterScroll] = useState(false);
+  const [loading, setLodaing] = useState(true);
 
   // 가로스크롤
   const [rdFromTop, setRdFromTop] = useState(0);
@@ -37,9 +39,12 @@ function Home() {
     setRdFromTop(rdRef.current.offsetTop);
   }, [thRef.current]);
 
+  useEffect(() => {
+    setLodaing(false);
+  }, []);
   window.onscroll = () => {
     let scrollTop = window.scrollY;
-    console.log(rdSvg, "scrollTop : ", scrollTop, "rdFromTop", rdFromTop);
+
     //th->footer 넘어갈때 배경 디졸브
     if (scrollTop >= thFromTop) {
       setThScroll(true);
@@ -77,9 +82,13 @@ function Home() {
 
   return (
     <>
-      <div className={styles.upLogo} onClick={pageUpClick}>
-        <FontAwesomeIcon icon={faChevronUp} />
-      </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className={styles.upLogo} onClick={pageUpClick}>
+          <FontAwesomeIcon icon={faChevronUp} />
+        </div>
+      )}
       <div className={styles.container}>
         <video muted autoPlay loop className={styles.bgVideo}>
           <source src={bg} type="video/mp4" />

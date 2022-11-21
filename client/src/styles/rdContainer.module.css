@@ -14,7 +14,6 @@
 .element {
   width: 100vw;
   height: 98vh;
-  background-color: #181818;
   flex-shrink: 0;
   color: white;
   margin: 0 20px 0 0;
@@ -30,8 +29,8 @@
   padding-left: 40px;
   padding-right: 40px;
 }
-.element:nth-child(4) {
-  background-color: crimson;
+.element:nth-child(3) {
+  background-color: #181818;
 }
 .pastBg {
   display: flex;
@@ -77,31 +76,56 @@
 }
 
 /* 점핑의 역사 */
-.items {
-  position: relative;
-  height: 90%;
+.trampolineIcon {
+  position: absolute;
+  width: 500px;
+  bottom: 0;
+  transform: rotate(-45deg) translateX(-300px);
+  transform-origin: 50% 50%;
 }
-.item {
-  display: flex;
-  flex-direction: column;
-}
-.desc {
-  margin-top: 50px;
-  justify-content: center;
-}
-.item ul {
-  list-style: none;
-}
-.descTop {
-  margin-top: 50px;
-  justify-content: center;
+/* -320px */
+.historyTitle {
+  width: 90%;
+  text-align: end;
 }
 
-.itemTop {
-  display: flex;
+.trampolineIcon:hover {
+  animation: trampolineRotate 25s linear infinite;
+  transition: 3s;
+  scale: 4;
+}
+@keyframes trampolineRotate {
+  from {
+    transform: translateX(30px) translateY(70px) rotate(0deg);
+  }
+  to {
+    transform: translateX(30px) translateY(70px) rotate(360deg);
+  }
+}
+
+.whiteTranpoline {
+  border: 1px solid red;
   position: relative;
-  width: 50%;
-  justify-content: space-around;
-  margin-left: 50px;
-  margin-top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrowSvg {
+  width: 200px;
+  margin-top: 450px;
+  margin-left: 230px;
+  fill: none;
+  stroke-width: 5px;
+}
+.arrowPath {
+  stroke: whitesmoke;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+
+  animation: path 1500ms forwards infinite;
+}
+
+@keyframes path {
+  100% {
+    stroke-dashoffset: 0;
+  }
 }

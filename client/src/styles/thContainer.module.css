@@ -21,7 +21,6 @@
   display: flex;
   position: relative;
   width: 415px;
-  background-color: whitesmoke;
   height: 600px;
   overflow: hidden;
   flex-direction: column;
