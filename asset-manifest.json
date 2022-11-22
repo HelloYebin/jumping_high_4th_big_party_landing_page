@@ -1,27 +1,30 @@
 {
   "files": {
-    "main.css": "/jumping_high_4th_big_party_landing_page/static/css/main.67f7b01d.css",
-    "main.js": "/jumping_high_4th_big_party_landing_page/static/js/main.8c408a21.js",
+    "main.css": "/jumping_high_4th_big_party_landing_page/static/css/main.cf0e5dc3.css",
+    "main.js": "/jumping_high_4th_big_party_landing_page/static/js/main.a4a7711e.js",
     "static/media/1122.mp4": "/jumping_high_4th_big_party_landing_page/static/media/1122.9f277b0b27824d34b235.mp4",
+    "static/media/IMG_4829.jpg": "/jumping_high_4th_big_party_landing_page/static/media/IMG_4829.b6857c1af59d54ea93cd.jpg",
     "static/media/esamanru.ttf": "/jumping_high_4th_big_party_landing_page/static/media/esamanru.5092051bd2ced1c65f91.ttf",
     "static/media/KOTRALEAP.ttf": "/jumping_high_4th_big_party_landing_page/static/media/KOTRALEAP.e848c0c12f25f9a935b3.ttf",
+    "static/media/trampoline_history.png": "/jumping_high_4th_big_party_landing_page/static/media/trampoline_history.332ec1681f53c40a427e.png",
     "static/media/notice.png": "/jumping_high_4th_big_party_landing_page/static/media/notice.b8aab793da83dd401ecc.png",
-    "static/media/redb.png": "/jumping_high_4th_big_party_landing_page/static/media/redb.8e3ee7f49b789927591b.png",
-    "static/media/main-s1.png": "/jumping_high_4th_big_party_landing_page/static/media/main-s1.51fe63e833ce052662f6.png",
+    "static/media/1.png": "/jumping_high_4th_big_party_landing_page/static/media/1.9898e029e361092d8cc5.png",
+    "static/media/2018big.png": "/jumping_high_4th_big_party_landing_page/static/media/2018big.d065bab20297c9bd9075.png",
     "static/media/DoHyeonRegular.ttf": "/jumping_high_4th_big_party_landing_page/static/media/DoHyeonRegular.33a15385076163ccf1b8.ttf",
-    "static/media/jumpingData.jpg": "/jumping_high_4th_big_party_landing_page/static/media/jumpingData.9960c58948e43bbb0eff.jpg",
     "static/media/Philosopher-Bold.ttf": "/jumping_high_4th_big_party_landing_page/static/media/Philosopher-Bold.7e98a8743136a6828ccf.ttf",
-    "static/media/news.JPG": "/jumping_high_4th_big_party_landing_page/static/media/news.c17bd1832fcc89185c6f.JPG",
+    "static/media/booth1.png": "/jumping_high_4th_big_party_landing_page/static/media/booth1.d05df5a15bdca0075cd5.png",
     "static/media/logo.png": "/jumping_high_4th_big_party_landing_page/static/media/logo.b5dcd807e8b1aa420c7c.png",
+    "static/media/Helvetica.ttf": "/jumping_high_4th_big_party_landing_page/static/media/Helvetica.2ebdf8d31ac364978012.ttf",
     "static/media/earlybird.png": "/jumping_high_4th_big_party_landing_page/static/media/earlybird.e4122f3ed1cc10f836f8.png",
     "static/media/reservation.png": "/jumping_high_4th_big_party_landing_page/static/media/reservation.918530273d38c333842d.png",
     "static/media/schedule.png": "/jumping_high_4th_big_party_landing_page/static/media/schedule.785389b709df909e2c0a.png",
+    "static/media/white.png": "/jumping_high_4th_big_party_landing_page/static/media/white.7acc16d92f28b4b8cc6f.png",
     "index.html": "/jumping_high_4th_big_party_landing_page/index.html",
-    "main.67f7b01d.css.map": "/jumping_high_4th_big_party_landing_page/static/css/main.67f7b01d.css.map",
-    "main.8c408a21.js.map": "/jumping_high_4th_big_party_landing_page/static/js/main.8c408a21.js.map"
+    "main.cf0e5dc3.css.map": "/jumping_high_4th_big_party_landing_page/static/css/main.cf0e5dc3.css.map",
+    "main.a4a7711e.js.map": "/jumping_high_4th_big_party_landing_page/static/js/main.a4a7711e.js.map"
   },
   "entrypoints": [
-    "static/css/main.67f7b01d.css",
-    "static/js/main.8c408a21.js"
+    "static/css/main.cf0e5dc3.css",
+    "static/js/main.a4a7711e.js"
   ]
 }
