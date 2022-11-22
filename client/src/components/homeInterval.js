@@ -121,11 +121,11 @@ function HomeInterval() {
         {dDay ? <h1>Countdown to BigParty</h1> : <h1>BigParty Day</h1>}
       </div>
       {timer}
-      <div className={styles.buttons} style={{ opacity: loading ? 1 : 0 }}>
+      {/* <div className={styles.buttons} style={{ opacity: loading ? 1 : 0 }}>
         <Link to="/apply">
-          <button>예약하기</button>
+          <button className={styles.applyBtn}>예약하기</button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

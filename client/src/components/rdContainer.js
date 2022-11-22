@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 
 import "../font.css";
 
-function RdContainer({ getData, getRdData, rdHorizonValue, rdSvg, dissolve }) {
+function RdContainer({ getData, getRdData, rdHorizonValue }) {
   const horizontal = useRef();
   const elementHeight = useRef();
   useEffect(() => {
@@ -21,9 +21,12 @@ function RdContainer({ getData, getRdData, rdHorizonValue, rdSvg, dissolve }) {
 
   let historyContainer = (
     <div className={styles.element} ref={elementHeight}>
-      <h1 style={{ marginLeft: "50px" }} className={styles.historyTitle}>
-        점핑피트니스의 역사
-      </h1>
+      <span>
+        <h1 style={{ marginLeft: "50px" }} className={styles.historyTitle}>
+          점핑피트니스의 <br />
+          역사
+        </h1>
+      </span>
       <img
         src={trampolineIcon}
         className={styles.trampolineIcon}

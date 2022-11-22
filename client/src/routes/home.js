@@ -28,9 +28,6 @@ function Home() {
   const windowWidth = window.innerWidth;
   const scrollDistance = rdFromTop + getRdData.width - windowWidth;
 
-  //svg 시작점
-  const [rdSvg, setRdSvg] = useState({ line: null, content: null });
-
   useEffect(() => {
     setThFromTop(thRef.current.offsetTop + thRef.current.scrollHeight / 2);
   }, [thRef.current]);
@@ -61,19 +58,6 @@ function Home() {
     if (scrollTop >= rdFromTop && scrollTop <= scrollDistance) {
       setRdHorizonValue(scrollTop - rdFromTop);
     }
-
-    //paint svg
-    if (scrollTop > rdFromTop - getRdData.height / 2.5) {
-      setRdSvg((prev) => ({ ...prev, line: true }));
-    } else {
-      setRdSvg((prev) => ({ ...prev, line: false }));
-    }
-
-    if (scrollTop >= rdFromTop - 200) {
-      setRdSvg((prev) => ({ ...prev, content: true }));
-    } else {
-      setRdSvg((prev) => ({ ...prev, content: false }));
-    }
   };
 
   const pageUpClick = () => {
@@ -102,7 +86,6 @@ function Home() {
           getData={setGetRdData}
           getRdData={getRdData}
           rdHorizonValue={rdHorizonValue}
-          rdSvg={rdSvg}
         />
       </div>
       <div ref={thRef}>

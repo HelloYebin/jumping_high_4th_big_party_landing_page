@@ -47,10 +47,7 @@
 .toApply > p:hover {
   color: white;
 }
-.headerList > li:hover > .dep2 {
-  display: block;
-  background-color: #181818;
-}
+
 .bigpartyDetail {
   background-color: #181818;
   color: white;
@@ -66,9 +63,14 @@
   font-weight: normal;
 }
 .dep2 {
+  position: relative;
   padding-left: 0;
+  margin-top: 37px;
+  background-color: #181818;
   display: none;
-  transition: 1s;
+}
+.headerList > li:hover > .dep2 {
+  display: block;
 }
 .logo {
   margin-left: 50px;

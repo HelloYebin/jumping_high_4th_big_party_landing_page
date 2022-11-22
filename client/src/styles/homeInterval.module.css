@@ -76,3 +76,6 @@
 .countDownTime {
   transition: 1s;
 }
+.applyBtn {
+  background-color: aqua;
+}

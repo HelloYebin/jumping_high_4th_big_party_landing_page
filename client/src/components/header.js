@@ -1,4 +1,5 @@
 import styles from "../styles/header.module.css";
+import ToGo from "./toGo.js";
 import { useEffect } from "react";
 import { useState } from "react";
 import headerLogo from "../image/logo.png";
@@ -48,6 +49,8 @@ export default function Header() {
       </Link>
       <div className={styles.headerContent}>
         <ul className={styles.headerList}>
+          {/* 점핑빅파티 */}
+
           <li className={styles.lists}>
             <Link
               to="/intro/summary"
@@ -57,11 +60,14 @@ export default function Header() {
               <p>점핑빅파티</p>
             </Link>
             <ul className={styles.dep2}>
-              <li>행사 개요</li>
-              <li>행사 히스토리</li>
-              <li>초대의 글</li>
+              <ToGo link="/intro/summary" nav="행사개요" />
+              <ToGo link="/intro/history" nav="행사 히스토리" />
+              <ToGo link="/intro/invite" nav="초대의 글" />
             </ul>
           </li>
+
+          {/* 행사안내 */}
+
           <li className={styles.lists}>
             <Link
               to="/info/schedule"
@@ -71,12 +77,15 @@ export default function Header() {
               <p>행사안내</p>
             </Link>
             <ul className={styles.dep2}>
-              <li>프로그램 일정</li>
-              <li>참가자 준비물</li>
-              <li>행사장 위치</li>
-              <li>부스 안내</li>
+              <ToGo link="/info/schedule" nav="프로그램 일정" />
+              <ToGo link="/info/prepare" nav="참가자 준비물" />
+              <ToGo link="/info/location" nav="행사장 위치" />
+              <ToGo link="/info/booth" nav="부스 안내" />
             </ul>
           </li>
+
+          {/* 행사소식 */}
+
           <li className={styles.lists}>
             <Link
               to="/news/notice"
@@ -86,11 +95,14 @@ export default function Header() {
               <p>행사소식</p>
             </Link>
             <ul className={styles.dep2}>
-              <li>공지사항</li>
-              <li>보도자료</li>
-              <li>점핑자료</li>
+              <ToGo link="/news/notice" nav="공지사항" />
+              <ToGo link="/news/press" nav="보도자료" />
+              <ToGo link="/news/jumping" nav="점핑자료" />
             </ul>
           </li>
+
+          {/* 참가신청 */}
+
           <li className={styles.lists}>
             <Link
               to="/apply"
