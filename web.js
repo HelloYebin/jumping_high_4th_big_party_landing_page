@@ -1,3 +1,7 @@
-export default function Web() {
-  return <h1>테스트</h1>;
-}
+var http = require("http");
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hello World\n");
+  })
+  .listen(8001);
