@@ -6,7 +6,7 @@ import RdContainer from "../components/rdContainer";
 import ThContainer from "../components/thContainer";
 import HomeFooter from "../components/homeFooter";
 import HomeSponcer from "../components/homeSponcer";
-import Loading from "./../components/loading";
+import Loading from "../components/loading";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";

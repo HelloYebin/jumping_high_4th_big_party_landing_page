@@ -1,7 +1,7 @@
 import styles from "../styles/rdContainer.module.css";
-import bigparty2016 from "../image/1.png";
-import bigparty2017 from "../image/IMG_4829.jpg";
-import bigparty2018 from "../image/2018big.png";
+import bigparty2016 from "../image/2016.png";
+import bigparty2017 from "../image/2017.png";
+import bigparty2018 from "../image/2018.png";
 import whiteTranpoline from "../image/white.png";
 import trampolineIcon from "../image/trampoline_history.png";
 import { useEffect, useRef } from "react";
