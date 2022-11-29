@@ -10,11 +10,10 @@ export default function RoutePress() {
   const [viewPress, setViewPress] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:8000/press/get").then((response) => {
+    Axios.get("http://localhost:8001/press/get").then((response) => {
       setViewPress(response.data);
     });
   }, []);
-  console.log(viewPress);
 
   const content = db.presses.map((press) => (
     <Link

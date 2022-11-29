@@ -3,7 +3,6 @@ import schedule from "../image/schedule.png";
 import boothImg from "../image/booth1.png";
 
 export default function Modal({ changeModal, mode }) {
-  console.log(mode);
   let modalImage;
   if (mode === "schedule") {
     modalImage = (

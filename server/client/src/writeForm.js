@@ -25,14 +25,13 @@ export default function WriteForm() {
   const handleOption = (e) => {
     setCategory(e.target.value);
   };
-  console.log(category);
   //글 등록하기
   const register = (e) => {
     const password = 1234;
     const que = prompt("비밀번호를 입력해주세요");
     if (Number(que) === password && category === "notice") {
       e.preventDefault();
-      Axios.post("http://localhost:8000/api/insert", {
+      Axios.post("http://localhost:8001/api/insert", {
         title: inputTitle,
         content: textValue,
       }).then(() => {
@@ -43,7 +42,7 @@ export default function WriteForm() {
       });
     } else if (Number(que) === password && category === "press") {
       e.preventDefault();
-      Axios.post("http://localhost:8000/press/insert", {
+      Axios.post("http://localhost:8001/press/insert", {
         title: inputTitle,
         content: textValue,
       }).then(() => {

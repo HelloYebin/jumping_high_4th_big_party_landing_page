@@ -63,7 +63,7 @@ export default function RouteReservation() {
   function callback(rsp) {
     if (rsp.success) {
       // jQuery.ajax({
-      //   url: "http://localhost:8000/payment/insert",
+      //   url: "http://localhost:8001/payment/insert",
       //   method: "POST",
       //   headers: { "Content-Type": "application/json" },
       //   data: {

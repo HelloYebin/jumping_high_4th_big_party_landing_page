@@ -11,7 +11,7 @@ export default function AdminRouteNotice() {
   const [viewNotice, setViewNotice] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:8000/api/get").then((response) => {
+    Axios.get("http://localhost:8001/api/get").then((response) => {
       setViewNotice(response.data);
     });
   }, []);
