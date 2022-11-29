@@ -11,6 +11,7 @@ export default function Modal({ changeModal, mode }) {
         width="900px"
         height="700px"
         className={styles.modalImg}
+        alt="scheduleImg"
       ></img>
     );
   } else if (mode === "booth") {
@@ -20,6 +21,7 @@ export default function Modal({ changeModal, mode }) {
         width="700px"
         height="800px"
         className={styles.modalImg}
+        alt="boothImg"
       ></img>
     );
   }

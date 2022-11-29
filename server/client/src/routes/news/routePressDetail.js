@@ -17,22 +17,23 @@ export default function RoutePressDetail() {
           width="600px"
           height="600px"
           className={styles.imgBox}
+          alt="pressImg"
           src={process.env.PUBLIC_URL + press.bodyImg} //public 경로
         />
       ) : (
         ""
       )}
       <br />
-      <a
+      <span
         dangerouslySetInnerHTML={{ __html: press.body }}
         className={styles.body}
-      ></a>
+      ></span>
     </div>
   ));
 
   return (
     <div className={styles.routeDetailContainer}>
-      <img src={banner} className={styles.banner} width="100%" />
+      <img src={banner} className={styles.banner} width="100%" alt="banner" />
       {content}
     </div>
   );

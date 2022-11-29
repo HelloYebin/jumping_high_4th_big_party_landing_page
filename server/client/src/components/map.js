@@ -42,6 +42,8 @@ export default function Map() {
       content: content,
       yAnchor: 1,
     });
+
+    customOverlay.setMap(map);
   }, []);
 
   return (

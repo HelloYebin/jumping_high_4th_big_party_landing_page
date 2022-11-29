@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/homeInterval.module.css";
-import { Link } from "react-router-dom";
 
 function HomeInterval() {
   let [dDay, setDDay] = useState(true);
@@ -15,7 +14,7 @@ function HomeInterval() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    let loadingTimer = setTimeout(() => setLoading(true), 1000);
+    setTimeout(() => setLoading(true), 1000);
   }, []);
 
   useEffect(() => {

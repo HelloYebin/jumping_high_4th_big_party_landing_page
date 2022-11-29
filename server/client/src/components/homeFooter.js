@@ -47,14 +47,14 @@ function HomeApply({ dissolve }) {
           </a>
         </div>
       </div>
-      <a
+      <span
         className={styles.copyright}
         style={{
           opacity: dissolve ? "1" : "0",
         }}
       >
         JUMPINGHIGH © 2014. All Rights Reserved.
-      </a>
+      </span>
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function RouteJumping() {
   return (
     <>
       <div className={styles.jumpingContainer}>
-        <img src={banner} className={styles.banner} width="100%" />
+        <img src={banner} className={styles.banner} width="100%" alt="banner" />
         <RouteNav nav={"행사소식"} current={"점핑자료"} />
         <div className={styles.jumping}>
           <h1 className={styles.title}>점핑자료</h1>

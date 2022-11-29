@@ -38,13 +38,14 @@ function ThContainer({ dissolve }) {
             width="350px"
             height="270px"
             src={schedule}
+            alt="schedule"
           />
           <h4>여기는 프로그램 일정 입니다.</h4>
-          <a>
+          <span>
             <button className={styles.detail} onClick={scheduleDetail}>
               자세히보기
             </button>
-          </a>
+          </span>
         </div>
         <div
           className={styles.content}
@@ -72,14 +73,15 @@ function ThContainer({ dissolve }) {
             width="350px"
             height="270px"
             src={booth}
+            alt="booth"
           />
           <h4>여기는 부스 설명란입니다.</h4>
 
-          <a>
+          <span>
             <button className={styles.detail} onClick={boothDetail}>
               자세히보기
             </button>
-          </a>
+          </span>
         </div>
       </div>
       {modal ? <Modal changeModal={changeModal} mode={mode} /> : ""}

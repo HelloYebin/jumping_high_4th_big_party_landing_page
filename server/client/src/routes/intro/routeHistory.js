@@ -6,7 +6,7 @@ export default function RouteHistory() {
   return (
     <>
       <div className={styles.historyContainer}>
-        <img src={banner} className={styles.banner} width="100%" />
+        <img src={banner} className={styles.banner} width="100%" alt="banner" />
         <RouteNav nav={"점핑빅파티"} current={"행사 히스토리"} />
         <div className={styles.history}>
           <h1 className={styles.title}>행사 히스토리</h1>

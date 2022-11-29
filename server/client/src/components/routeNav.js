@@ -62,21 +62,21 @@ export default function RouteNav({ current, nav }) {
   return (
     <nav className={styles.routeNavContainer}>
       <div className={styles.nav}>
-        <a>{nav}</a>
-        <a>
+        <span>{nav}</span>
+        <span>
           <FontAwesomeIcon icon={faAngleRight} />
-        </a>
+        </span>
       </div>
 
       <div className={styles.navCurrent} onClick={navClick}>
-        <a>{current}</a>
-        <a>
+        <span>{current}</span>
+        <span>
           <FontAwesomeIcon
             icon={faAngleRight}
             className={styles.navArrow}
             style={{ rotate: clickStatus ? "-90deg" : "90deg" }}
           />
-        </a>
+        </span>
       </div>
       <div
         className={styles.navList}

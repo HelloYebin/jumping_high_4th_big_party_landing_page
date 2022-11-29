@@ -1,11 +1,5 @@
 import styles from "./applyStyles/routeApply.module.css";
 import banner from "../../image/notice.png";
-import { faEarlybirds } from "@fortawesome/free-brands-svg-icons";
-import {
-  faCalendarCheck,
-  faCalendarPlus,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 import reservationIcon from "../../image/reservation.png";
 import earlybirdIcon from "../../image/earlybird.png";
@@ -27,13 +21,9 @@ export default function RouteApply() {
     }
   };
 
-  const checkReservation = () => {
-    console.log("예약확인");
-  };
-
   return (
     <div className={styles.applyContainer}>
-      <img src={banner} className={styles.banner} width="100%" />
+      <img src={banner} className={styles.banner} width="100%" alt="banner" />
       <div className={styles.apply}>
         <h1 className={styles.title}>참가신청</h1>
         <div className={styles.body}>
@@ -42,6 +32,7 @@ export default function RouteApply() {
               src={earlybirdIcon}
               width="150px"
               className={styles.icons}
+              alt="earlyBird"
             ></img>
             <button className={styles.buttons}>얼리버드 예약</button>
           </div>
@@ -50,8 +41,8 @@ export default function RouteApply() {
               src={reservationIcon}
               width="150px"
               className={styles.icons}
+              alt="reservationBtn"
             ></img>
-
             <button className={styles.buttons}>일반 예약</button>
           </div>
           {/* <div className={styles.content} onClick={checkReservation}>

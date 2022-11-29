@@ -1,6 +1,6 @@
 import banner from "../../image/notice.png";
 import styles from "./applyStyles/routeReservation.module.css";
-import jQuery from "jquery";
+// import jQuery from "jquery";
 import { useEffect, useState } from "react";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -201,7 +201,7 @@ export default function RouteReservation() {
         <p>티켓은 당일 수령~</p>
       </div>
       <span className={styles.submit}>
-        <a>가격 : {autoComma}원</a>
+        <span>가격 : {autoComma}원</span>
         <input type="submit" value="결제" className={styles.payBtn}></input>
       </span>
     </form>
@@ -209,7 +209,7 @@ export default function RouteReservation() {
 
   return (
     <>
-      <img src={banner} className={styles.banner} width="100%" />
+      <img src={banner} className={styles.banner} width="100%" alt="banner" />
       <div className={styles.reservation}>
         <h1 className={styles.title}>예약하기</h1>
         <hr />

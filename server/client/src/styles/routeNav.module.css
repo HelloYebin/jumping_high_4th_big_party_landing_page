@@ -22,11 +22,11 @@
 .navCurrent {
   font-size: 25px;
 }
-.nav > a {
+.nav > span {
   margin-left: 10px;
   margin-right: 10px;
 }
-.navCurrent > a {
+.navCurrent > span {
   margin-left: 10px;
   margin-right: 10px;
 }

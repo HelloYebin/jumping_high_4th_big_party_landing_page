@@ -10,7 +10,6 @@ Quill.register("modules/ImageResize", ImageResize);
 export default function WriteForm() {
   const [inputTitle, setInputTitle] = useState("");
   const [textValue, setTextValue] = useState("");
-  const [enters, setEnters] = useState([]);
   const [category, setCategory] = useState("notice");
 
   const navigate = useNavigate();
@@ -126,17 +125,6 @@ export default function WriteForm() {
         />
         <input type="submit"></input>
       </form>
-      <div className="boardContent">
-        {enters.map((con, idx) => (
-          <div className="content" key={idx}>
-            <h2 className="title">{con.title}</h2>
-            <span
-              className="contentBody"
-              dangerouslySetInnerHTML={{ __html: con.body }}
-            ></span>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }

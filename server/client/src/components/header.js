@@ -45,6 +45,7 @@ export default function Header() {
           width="120px"
           height="80px"
           className={styles.logo}
+          alt="logo"
         />
       </Link>
       <div className={styles.headerContent}>

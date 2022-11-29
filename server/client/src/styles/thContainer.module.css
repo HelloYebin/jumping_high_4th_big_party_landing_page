@@ -63,6 +63,6 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.content > a > button {
+.content > span > button {
   cursor: pointer;
 }

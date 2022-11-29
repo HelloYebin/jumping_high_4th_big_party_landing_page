@@ -45,7 +45,7 @@ function NdContainer() {
 
       <div className={styles.wrapper}>
         <div className={styles.ndBody}>
-          <a
+          <span
             className={styles.bodyTitle}
             style={{
               transform: scroll ? `translateY(0)` : `translateY(100px)`,
@@ -53,7 +53,7 @@ function NdContainer() {
             }}
           >
             Welcome to BigParty
-          </a>
+          </span>
           <p
             className={styles.invitation}
             style={{
