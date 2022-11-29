@@ -23,7 +23,7 @@ import WriteForm from "./writeForm";
 function App() {
   return (
     <div className={styles.appContainer}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <ScrollTop />
         <div className={styles.appContents}>
           <Header />

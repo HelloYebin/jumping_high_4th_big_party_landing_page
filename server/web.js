@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
-const PORT = process.env.port || 8000;
+const PORT = process.env.port || 8001;
 
 const db = mysql.createPool({
   host: "localhost",
@@ -17,8 +17,6 @@ const db = mysql.createPool({
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use(express.static("build"));
 
 //공지사항 db 삭제하기
 app.delete("/api/:id", function (req, res) {
@@ -88,6 +86,12 @@ app.listen(PORT, () => {
   console.log(`running on port ${PORT}`);
 });
 
+app.use(express.static(__dirname + "/client/build"));
+
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/build/index.html");
+  res.sendFile(express.static(__dirname + "/client/build/index.html"));
+});
+
+app.get("*", function (req, res) {
+  res.sendFile(__dirname + "/client/build/index.html");
 });

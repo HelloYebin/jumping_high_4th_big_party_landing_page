@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactQuill, { Quill } from "react-quill";
-import "../node_modules/react-quill/dist/quill.snow.css";
+import "react-quill/dist/quill.snow.css";
 import "./writeForm.css";
 import ImageResize from "quill-image-resize";
 import Axios from "axios";
