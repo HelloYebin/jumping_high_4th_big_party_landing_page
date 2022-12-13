@@ -8,13 +8,17 @@ html {
   padding: 0;
   height: 100vh;
 }
-.container {
-  overflow: hidden;
-  max-height: 100vh;
+.videoWrap {
+  position: relative;
+  height: 100vh;
 }
 .bgVideo {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .black {
   position: absolute;
@@ -41,4 +45,24 @@ html {
   cursor: pointer;
   color: white;
   font-size: 40px;
+}
+@media screen and (max-width: 1023px) {
+  .upLogo {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* width 767px 반응형 모바일*/
+@media all and (max-width: 767px) {
+  .upLogo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .upLogo {
+    display: none;
+  }
 }

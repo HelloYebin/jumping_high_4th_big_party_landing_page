@@ -13,7 +13,7 @@ export default function AdminRouteNotice() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get("http://localhost:8001/api/get").then((response) => {
+    Axios.get("/api/get").then((response) => {
       setViewNotice(response.data);
     });
   }, []);
@@ -23,7 +23,7 @@ export default function AdminRouteNotice() {
     const password = 1234;
     const que = prompt("비밀번호를 입력해주세요");
     if (Number(que) === password) {
-      Axios.delete(`http://localhost:8001/api/${id}`)
+      Axios.delete(`/api/${id}`)
         .then((res) => {
           alert("글이 삭제되었습니다.");
           window.location.reload();

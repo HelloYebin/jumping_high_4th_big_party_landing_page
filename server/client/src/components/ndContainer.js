@@ -75,13 +75,7 @@ function NdContainer() {
         </div>
         {/* 빅파티 로고 */}
         <div className={styles.ndLogoContainer}>
-          <img
-            className={styles.ndLogo}
-            alt="logo"
-            src={icon2}
-            width="400px"
-            height="400px"
-          />
+          <img className={styles.ndLogo} alt="logo" src={icon2} />
         </div>
       </div>
     </div>

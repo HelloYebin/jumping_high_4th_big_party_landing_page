@@ -2,48 +2,41 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  z-index: 10;
   position: relative;
   transition: 0.5s;
 }
 .thBody {
-  height: 90vh;
-  width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   gap: 20px;
   justify-content: center;
+  width: 100%;
 }
 .content {
-  margin-top: 120px;
   display: flex;
   position: relative;
-  width: 415px;
   height: 600px;
   overflow: hidden;
   flex-direction: column;
-  transition-duration: 0.2s;
 }
-.content:hover {
-  transform: translateY(-30px);
-}
+
 .content > h1 {
-  color: #181818;
   font-family: Manru;
   letter-spacing: 1px;
   margin-left: 30px;
 }
-.content > h4 {
-  color: #181818;
+.content > .contentBody > h4 {
   margin-left: 30px;
 }
-.schedule {
-  margin-top: 30px;
+.descImg {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  width: 350px;
+  height: 270px;
+  padding: 30px 30px 0 30px;
 }
 .detail {
   position: absolute;
@@ -53,16 +46,142 @@
   font-weight: bold;
   font-size: 13pt;
   background-color: #181818;
-  border: 0px solid white;
+  border: 1px solid white;
   right: 20px;
   bottom: 20px;
+  cursor: pointer;
 }
-.map {
-  margin-top: 30px;
+
+.content > span > button {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .content:hover {
+    transition-duration: 0.2s;
+    transform: translateY(-30px);
+  }
+  .thContainer {
+    height: 80vh;
+  }
+  .thBody {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.responsiveDetail {
+  margin: 15px 0 15px 0;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #181818;
+  border: 1px solid white;
+  display: none;
 }
-.content > span > button {
+.responsiveBtn {
+  color: whitesmoke;
+  width: 100px;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.linkBtn {
+  text-decoration: none;
+}
+.mapDetail {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 13pt;
+  background-color: #181818;
+  border: 1px solid white;
+  right: 20px;
+  bottom: 20px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  /* width 1023px 반응형 */
+  .thBody {
+    flex-direction: column;
+  }
+  .content {
+    margin: 10px 30px 10px 30px;
+    height: 100%;
+  }
+  .descImg {
+    transform: none;
+    left: 2em;
+    min-width: 250px;
+    max-height: 220px;
+    padding: 0 0 20px 0;
+  }
+  .content > .contentBody > h4 {
+    color: #181818;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .contentBody {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+  }
+  .mapBody {
+    padding: 0;
+  }
+
+  .mapDesc {
+    position: relative;
+    left: -30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일 가로 */
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .BoxTitle {
+    font-size: 20px;
+  }
+  .mapDesc {
+    display: none;
+  }
+  .itemDesc {
+    display: none;
+  }
+  .descImg {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: auto;
+    padding: 0;
+  }
+  .content {
+    margin: 10px 20px 10px 20px;
+  }
+  .mapBody {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .detail {
+    display: none;
+  }
+  .mapDetail {
+    width: 114px;
+    font-weight: bold;
+    font-size: 10pt;
+    margin: 15px 0 0 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .responsiveDetail {
+    display: block;
+  }
 }

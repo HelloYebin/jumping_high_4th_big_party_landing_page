@@ -11,31 +11,31 @@ function HomeSponcer({ dissolve }) {
       className={styles.sponcerContainer}
       style={{ backgroundColor: dissolve ? "white" : "#181818" }}
     >
-      <div className={styles.bg}>
+      <div className={styles.sponcerBg}>
         <span className={styles.title}>
           <h1>BIGPARTY</h1>
           <h1>WITH</h1>
-          <h1>SPONCER</h1>
+          <h1>PARTNER</h1>
         </span>
         <div className={styles.logos}>
           <ul className={styles.sponcers}>
             <li>
-              <img src={jumpingKorea} width="140px" alt="jumpingKor"></img>
+              <img src={jumpingKorea} alt="jumpingKor"></img>
             </li>
             <li>
-              <img src={aerower} width="140px" alt="aerower"></img>
+              <img src={aerower} alt="aerower"></img>
             </li>
             <li>
-              <img src={highjump} width="140px" alt="highjump"></img>
+              <img src={highjump} alt="highjump"></img>
             </li>
             <li>
-              <img src={original} width="140px" alt="original"></img>
+              <img src={original} alt="original"></img>
             </li>
             <li>
-              <img src={kjfa} width="140px" alt="kjfa"></img>
+              <img src={kjfa} alt="kjfa"></img>
             </li>
             <li>
-              <img src={jumpingKorea} width="140px" alt="jumpingKor"></img>
+              <img src={jumpingKorea} alt="jumpingKor"></img>
             </li>
             <li className={styles.bottomLine}>
               <img src={jumpingKorea} width="140px" alt="jumpingKor"></img>

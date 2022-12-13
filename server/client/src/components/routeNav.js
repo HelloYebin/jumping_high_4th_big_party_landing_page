@@ -25,8 +25,8 @@ export default function RouteNav({ current, nav }) {
 
   const newsList = [
     { id: 1, link: "/news/notice", body: "공지사항" },
-    { id: 2, link: "/news/press", body: "보도자료" },
-    { id: 3, link: "/news/jumping", body: "점핑자료" },
+    { id: 2, link: "/news/press", body: "점핑자료" },
+    // { id: 3, link: "/news/jumping", body: "점핑자료" },
   ];
 
   const lis = [];

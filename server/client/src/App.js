@@ -1,5 +1,5 @@
 import Header from "./components/header";
-import Footer from "./components/footer";
+import Footer from "./components/componentFooter";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./routes/home";
 import RouteApply from "./routes/apply/routeApply";
@@ -15,7 +15,6 @@ import RoutePress from "./routes/news/routePress";
 import RouteJumping from "./routes/news/routeJumping";
 import RoutePressDetail from "./routes/news/routePressDetail";
 import ScrollTop from "./components/scrollTop";
-import RouteReservation from "./routes/apply/routeReservation";
 import styles from "./App.module.css";
 import AdminRouteNotice from "./routes/news/adminRouteNotice";
 import WriteForm from "./writeForm";
@@ -42,7 +41,6 @@ function App() {
             <Route path="/news/press/:id" element={<RoutePressDetail />} />
             <Route path="/news/jumping" element={<RouteJumping />} />
             <Route path="/apply" element={<RouteApply />} />
-            <Route path="/apply/reservation" element={<RouteReservation />} />
             <Route path="/write" element={<WriteForm />} />
           </Routes>
         </div>

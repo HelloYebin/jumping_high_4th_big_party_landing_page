@@ -11,10 +11,6 @@
   transform: translateX(-50%);
   z-index: 0;
 }
-.body {
-  font-size: 13pt;
-  font-weight: bold;
-}
 .imgBox {
   position: relative;
   left: 50%;

@@ -4,13 +4,13 @@ import styles from "./newsStyles/routeNotice.module.css";
 import NoticeContent from "./noticeContent";
 import { useEffect, useState } from "react";
 import Axios from "axios";
-import "./newsStyles/reactquill.css";
+// import "./newsStyles/reactquill.css";
 
 export default function AdminRouteNotice() {
   const [viewNotice, setViewNotice] = useState([]);
 
   useEffect(() => {
-    Axios.get("http://localhost:8001/api/get").then((response) => {
+    Axios.get("/api/get").then((response) => {
       setViewNotice(response.data);
     });
   }, []);

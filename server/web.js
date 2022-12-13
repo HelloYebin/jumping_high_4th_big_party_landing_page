@@ -5,14 +5,25 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { urlencoded } = require("body-parser");
 const PORT = process.env.port || 8001;
+const path = require("path");
 
-const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "201537",
-  database: "bigparty",
-  port: "3307",
+const db = mysql.createConnection({
+  host: "nodejs-014.cafe24.com",
+  user: "bigparty7",
+  password: "Wjavld0220^^",
+  database: "bigparty7",
+  port: "3306",
 });
+// const db = mysql.createConnection({
+//   host: "localhost",
+//   user: "root",
+//   password: "201537",
+//   database: "bigparty",
+//   port: "3307",
+// });
+
+//데이터베이스 연결
+db.connect();
 
 app.use(cors());
 app.use(express.json());
@@ -45,41 +56,22 @@ app.post("/api/insert", (req, res) => {
   });
 });
 
-//press table data 가져오기
-app.get("/press/get", (req, res) => {
-  const sqlQuery = "SELECT * FROM press ORDER BY id DESC";
-  db.query(sqlQuery, (err, result) => {
-    res.send(result);
-  });
-});
+// //press table data 가져오기
+// app.get("/press/get", (req, res) => {
+//   const sqlQuery = "SELECT * FROM press ORDER BY id DESC";
+//   db.query(sqlQuery, (err, result) => {
+//     res.send(result);
+//   });
+// });
 
-// PRESS TABLE에 글 저장
-app.post("/press/insert", (req, res) => {
-  const title = req.body.title;
-  const content = req.body.content;
-  const sqlQuery = "INSERT INTO press (title, description) VALUES (?,?)";
-  db.query(sqlQuery, [title, content], (err, result) => {
-    res.send("success!");
-  });
-});
-
-// 결제 db 저장
-// app.post("/payment/insert", (req, res) => {
-//   const name = req.body.name;
-//   const amount = req.body.amount;
-//   const phone = req.body.phone;
-//   const email = req.body.email;
-//   const paynum = req.body.paynum;
-//   const ordernum = req.body.ordernum;
-//   const sqlQuery =
-//     "INSERT INTO participants (name,amount,phone,email,paynum,status,ordernum) VALUES(?,?,?,?,?,?,?);";
-//   db.query(
-//     sqlQuery,
-//     [name, amount, phone, email, paynum, ordernum],
-//     (err, result) => {
-//       res.send("success!");
-//     }
-//   );
+// // PRESS TABLE에 글 저장
+// app.post("/press/insert", (req, res) => {
+//   const title = req.body.title;
+//   const content = req.body.content;
+//   const sqlQuery = "INSERT INTO press (title, description) VALUES (?,?)";
+//   db.query(sqlQuery, [title, content], (err, result) => {
+//     res.send("success!");
+//   });
 // });
 
 app.listen(PORT, () => {
@@ -89,9 +81,9 @@ app.listen(PORT, () => {
 app.use(express.static(__dirname + "/client/build"));
 
 app.get("/", function (req, res) {
-  res.sendFile(express.static(__dirname + "/client/build/index.html"));
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(__dirname + "/client/build/index.html");
+  res.sendFile(path.join(__dirname, "/client/build/index.html"));
 });

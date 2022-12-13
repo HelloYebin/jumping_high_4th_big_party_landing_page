@@ -3,20 +3,8 @@ import banner from "../../image/notice.png";
 import styles from "./newsStyles/routePress.module.css";
 import { Link } from "react-router-dom";
 import db from "../../db/data.json";
-// mysql로 press 연결 시킬때
-// import { useState, useEffect } from "react";
-// import Axios from "axios";
 
 export default function RoutePress() {
-  // mysql로 press 연결 시킬때
-  // const [viewPress, setViewPress] = useState([]);
-
-  // useEffect(() => {
-  //   Axios.get("http://localhost:8001/press/get").then((response) => {
-  //     setViewPress(response.data);
-  //   });
-  // }, []);
-
   const content = db.presses.map((press) => (
     <Link
       to={`/news/press/${press.id}`}
@@ -42,9 +30,9 @@ export default function RoutePress() {
     <>
       <div className={styles.pressContainer}>
         <img src={banner} className={styles.banner} width="100%" alt="banner" />
-        <RouteNav nav={"행사소식"} current={"보도자료"} />
+        <RouteNav nav={"행사소식"} current={"점핑자료"} />
         <div className={styles.press}>
-          <h1 className={styles.title}>보도자료</h1>
+          <h1 className={styles.title}>점핑자료</h1>
           <div className={styles.body}>{content}</div>
         </div>
       </div>

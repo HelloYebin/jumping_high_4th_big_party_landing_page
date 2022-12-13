@@ -6,10 +6,9 @@ import RdContainer from "../components/rdContainer";
 import ThContainer from "../components/thContainer";
 import HomeFooter from "../components/homeFooter";
 import HomeSponcer from "../components/homeSponcer";
-import Loading from "../components/loading";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 function Home() {
   const thRef = useRef(null);
@@ -19,7 +18,7 @@ function Home() {
   const [thFromTop, setThFromTop] = useState(0);
   const [thScroll, setThScroll] = useState(false);
   const [footerScroll, setFooterScroll] = useState(false);
-  const [loading, setLodaing] = useState(true);
+  const [scroll, setScroll] = useState(0);
 
   // 가로스크롤
   const [rdFromTop, setRdFromTop] = useState(0);
@@ -28,19 +27,12 @@ function Home() {
   const windowWidth = window.innerWidth;
   const scrollDistance = rdFromTop + getRdData.width - windowWidth;
 
-  useEffect(() => {
-    setThFromTop(thRef.current.offsetTop + thRef.current.scrollHeight / 2);
-  }, [thRef.current]);
-
-  useEffect(() => {
-    setRdFromTop(rdRef.current.offsetTop);
-  }, [thRef.current]);
-
-  useEffect(() => {
-    setLodaing(false);
-  }, []);
   window.onscroll = () => {
     let scrollTop = window.scrollY;
+
+    setScroll(scrollTop);
+    setThFromTop(thRef.current.offsetTop + thRef.current.scrollHeight / 2);
+    setRdFromTop(rdRef.current.offsetTop);
 
     //th->footer 넘어갈때 배경 디졸브
     if (scrollTop >= thFromTop) {
@@ -66,17 +58,16 @@ function Home() {
 
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div className={styles.upLogo} onClick={pageUpClick}>
-          <FontAwesomeIcon icon={faChevronUp} />
-        </div>
-      )}
-      <div className={styles.container}>
-        <video muted autoPlay loop className={styles.bgVideo}>
-          <source src={bg} type="video/mp4" />
+      <div className={styles.upLogo} onClick={pageUpClick}>
+        <FontAwesomeIcon icon={faChevronUp} />
+      </div>
+
+      <div className={styles.videoWrap}>
+        <video src={bg} muted autoPlay loop className={styles.bgVideo}>
+          해당 확장자는 지원하지 않습니다.
+          {/* <source src={bg} type="video/mp4" /> */}
         </video>
+
         <div className={styles.black}></div>
       </div>
       <HomeInterval />
@@ -86,6 +77,7 @@ function Home() {
           getData={setGetRdData}
           getRdData={getRdData}
           rdHorizonValue={rdHorizonValue}
+          scroll={scroll}
         />
       </div>
       <div ref={thRef}>

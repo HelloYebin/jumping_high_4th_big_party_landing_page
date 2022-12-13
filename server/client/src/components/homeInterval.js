@@ -3,7 +3,6 @@ import styles from "../styles/homeInterval.module.css";
 
 function HomeInterval() {
   let [dDay, setDDay] = useState(true);
-  let intervalTimer;
   let [countDay, setCountDay] = useState("");
   let [countHour, setCountHour] = useState("");
   let [countMin, setCountMin] = useState("");
@@ -18,9 +17,9 @@ function HomeInterval() {
   }, []);
 
   useEffect(() => {
-    intervalTimer = setInterval(() => {
+    let intervalTimer = setInterval(() => {
       //D-day 설정
-      const dDayTime = new Date("2022-12-25, 00:00:00");
+      const dDayTime = new Date("2022/12/25, 00:00:00");
       let todayTime = new Date();
       let diff = dDayTime - todayTime;
       let countDown = Math.floor(diff / 1000);
@@ -104,7 +103,7 @@ function HomeInterval() {
         ""
       )}
       {dDay ? (
-        <li>
+        <li className={styles.responsiveMin}>
           <div className={`${styles.times} ${styles.pop}`}>{`${countSec}`}</div>
           <span className={styles.countDownLabel}>초</span>
         </li>

@@ -6,7 +6,7 @@ import { faYoutube, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function HomeApply({ dissolve }) {
   return (
-    <div className={styles.bg}>
+    <div className={styles.footerBg}>
       <div
         className={styles.applyContainer}
         style={{
@@ -14,7 +14,7 @@ function HomeApply({ dissolve }) {
         }}
       >
         <div className={styles.logos}>
-          <img src={footerLogo} width="300px" height="200px" alt="logo"></img>
+          <img src={footerLogo} className={styles.footerLogo} alt="logo"></img>
         </div>
         <div className={styles.links}>
           <a

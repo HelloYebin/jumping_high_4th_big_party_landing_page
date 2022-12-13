@@ -5,19 +5,20 @@ import bigparty2018 from "../image/2018.png";
 import whiteTranpoline from "../image/white.png";
 import trampolineIcon from "../image/trampoline_history.png";
 import { useEffect, useRef } from "react";
-
+import RdTimeLine from "./rdTimeLine.js";
 import "../font.css";
 
-function RdContainer({ getData, getRdData, rdHorizonValue }) {
+function RdContainer({ getData, getRdData, rdHorizonValue, scroll }) {
   const horizontal = useRef();
   const elementHeight = useRef();
+
   useEffect(() => {
     getData((prev) => ({
       ...prev,
       width: horizontal.current.scrollWidth,
       height: horizontal.current.offsetHeight,
     }));
-  }, [horizontal.current]);
+  }, [getData, scroll]);
 
   let historyContainer = (
     <div className={styles.element} ref={elementHeight}>
@@ -93,6 +94,23 @@ function RdContainer({ getData, getRdData, rdHorizonValue }) {
             </div>
           </div>
         </div>
+      </section>
+      <section className={styles.responsiveArea}>
+        <p className={styles.responsiveTimeline}>TIMELINE</p>
+        <RdTimeLine year="2001" body="점핑피트니스의 태동" />
+        <RdTimeLine year="2005" body="점핑 브랜드 로고 등록 / 첫 강사교육" />
+        <RdTimeLine year="2010" body="육각 트램폴린의 발명" />
+        <RdTimeLine
+          year="2011"
+          body="독일 FIBO 진출, 5대 피트니스 종목에 선정"
+        />
+        <RdTimeLine
+          year="2014"
+          body="점핑코리아 (점핑하이) 설립 / 첫 강사배출 "
+        />
+        <RdTimeLine year="2016" body="1회 빅파티" />
+        <RdTimeLine year="2017" body="2회 빅파티" />
+        <RdTimeLine year="2018" body="3회 빅파티" />
       </section>
     </div>
   );

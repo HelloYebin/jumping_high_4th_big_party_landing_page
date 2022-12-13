@@ -1,14 +1,16 @@
 import styles from "../styles/header.module.css";
-import ToGo from "./toGo.js";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import headerLogo from "../image/logo.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
+import Headerlist from "./headerList";
 
 export default function Header() {
   // 스크롤이 50px 이상 내려올경우 true값을 넣어줄 useState
   const [scroll, setScroll] = useState(false);
   const [overMouse, setOverMouse] = useState(false);
+  const [barToggle, setBarToggle] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -32,89 +34,116 @@ export default function Header() {
   const leaveHandle = () => {
     setOverMouse(false);
   };
-  return (
-    <nav
-      className={styles.headerContainer}
-      onMouseEnter={overHandle}
-      onMouseLeave={leaveHandle}
-      style={{ top: scroll ? "-70px" : "0px", opacity: scroll ? "0" : "1" }}
-    >
-      <Link to="/">
-        <img
-          src={headerLogo}
-          width="120px"
-          height="80px"
-          className={styles.logo}
-          alt="logo"
-        />
-      </Link>
-      <div className={styles.headerContent}>
-        <ul className={styles.headerList}>
-          {/* 점핑빅파티 */}
 
-          <li className={styles.lists}>
+  return (
+    <>
+      <nav
+        className={styles.headerContainer}
+        onMouseEnter={overHandle}
+        onMouseLeave={leaveHandle}
+        style={{ top: scroll ? "-70px" : "0px", opacity: scroll ? "0" : "1" }}
+      >
+        <Link to="/">
+          <img src={headerLogo} className={styles.logo} alt="logo" />
+        </Link>
+
+        <div className={styles.headerContent}>
+          <ul className={styles.headerList}>
+            <Headerlist
+              overMouse={overMouse}
+              list="점핑빅파티"
+              link="/intro/summary"
+            />
+            <Headerlist
+              overMouse={overMouse}
+              list="행사안내"
+              link="/info/schedule"
+            />
+            <Headerlist
+              overMouse={overMouse}
+              list="행사소식"
+              link="/news/notice"
+            />
+            <Headerlist overMouse={overMouse} list="참가신청" link="/apply" />
+          </ul>
+        </div>
+        <FontAwesomeIcon
+          icon={faBars}
+          className={styles.bars}
+          onClick={() => {
+            setBarToggle(!barToggle);
+          }}
+        />
+      </nav>
+      <div
+        className={barToggle ? styles.showBackGround : styles.hiedBackGround}
+      >
+        <FontAwesomeIcon
+          icon={faX}
+          className={styles.faX}
+          onClick={() => {
+            setBarToggle(!barToggle);
+          }}
+        />
+        <ul className={styles.responsiveList}>
+          <li
+            className={styles.resLists}
+            onClick={() => {
+              setBarToggle(false);
+            }}
+          >
             <Link
               to="/intro/summary"
-              className={styles.toApply}
+              className={styles.resLink}
               style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
-              <p>점핑빅파티</p>
+              <p className={styles.resBtn}>점핑빅파티</p>
             </Link>
-            <ul className={styles.dep2}>
-              <ToGo link="/intro/summary" nav="행사개요" />
-              <ToGo link="/intro/history" nav="행사 히스토리" />
-              <ToGo link="/intro/invite" nav="초대의 글" />
-            </ul>
           </li>
-
-          {/* 행사안내 */}
-
-          <li className={styles.lists}>
+          <li
+            className={styles.resLists}
+            onClick={() => {
+              setBarToggle(false);
+            }}
+          >
             <Link
               to="/info/schedule"
-              className={styles.toApply}
+              className={styles.resLink}
               style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
-              <p>행사안내</p>
+              <p className={styles.resBtn}>행사안내</p>
             </Link>
-            <ul className={styles.dep2}>
-              <ToGo link="/info/schedule" nav="프로그램 일정" />
-              <ToGo link="/info/prepare" nav="참가자 준비물" />
-              <ToGo link="/info/location" nav="행사장 위치" />
-              <ToGo link="/info/booth" nav="부스 안내" />
-            </ul>
           </li>
-
-          {/* 행사소식 */}
-
-          <li className={styles.lists}>
+          <li
+            className={styles.resLists}
+            onClick={() => {
+              setBarToggle(false);
+            }}
+          >
             <Link
               to="/news/notice"
-              className={styles.toApply}
+              className={styles.resLink}
               style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
-              <p>행사소식</p>
+              <p className={styles.resBtn}>행사소식</p>
             </Link>
-            <ul className={styles.dep2}>
-              <ToGo link="/news/notice" nav="공지사항" />
-              <ToGo link="/news/press" nav="보도자료" />
-              <ToGo link="/news/jumping" nav="점핑자료" />
-            </ul>
           </li>
-
-          {/* 참가신청 */}
-
-          <li className={styles.lists}>
+          <li
+            className={`${styles.resLists} ${styles.applyBtn}`}
+            onClick={() => {
+              setBarToggle(false);
+            }}
+          >
             <Link
               to="/apply"
-              className={styles.toApply}
+              className={styles.resLink}
               style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
-              <p>참가신청</p>
+              <p className={styles.resBtn}>참가신청</p>
             </Link>
           </li>
         </ul>
       </div>
-    </nav>
+    </>
   );
 }

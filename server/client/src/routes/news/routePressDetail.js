@@ -1,6 +1,9 @@
 import { useParams } from "react-router-dom";
 import styles from "./newsStyles/routePressDetail.module.css";
 import banner from "../../image/notice.png";
+// import Axios from "axios";
+// import { useEffect, useState } from "react";
+import "./newsStyles/reactquill.css";
 import db from "../../db/data.json";
 
 export default function RoutePressDetail() {

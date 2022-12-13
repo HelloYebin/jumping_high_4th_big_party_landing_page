@@ -49,7 +49,7 @@ export default function Map() {
   return (
     <div>
       <div>
-        <div id="map" style={{ width: "350px", height: "270px" }}></div>
+        <div id="map"></div>
       </div>
     </div>
   );

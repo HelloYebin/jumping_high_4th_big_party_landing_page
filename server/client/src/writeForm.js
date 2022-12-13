@@ -30,7 +30,7 @@ export default function WriteForm() {
     const que = prompt("비밀번호를 입력해주세요");
     if (Number(que) === password && category === "notice") {
       e.preventDefault();
-      Axios.post("http://localhost:8001/api/insert", {
+      Axios.post("/api/insert", {
         title: inputTitle,
         content: textValue,
       }).then(() => {
@@ -39,17 +39,17 @@ export default function WriteForm() {
         alert("공지사항 등록 완료!");
         navigate("/news/notice/admin");
       });
-    } else if (Number(que) === password && category === "press") {
-      e.preventDefault();
-      Axios.post("http://localhost:8001/press/insert", {
-        title: inputTitle,
-        content: textValue,
-      }).then(() => {
-        setTextValue("");
-        setInputTitle("");
-        alert("보도자료 등록 완료!");
-        navigate("/news/notice/press");
-      });
+      // } else if (Number(que) === password && category === "press") {
+      //   e.preventDefault();
+      //   Axios.post("http://localhost:8001/press/insert", {
+      //     title: inputTitle,
+      //     content: textValue,
+      //   }).then(() => {
+      //     setTextValue("");
+      //     setInputTitle("");
+      //     alert("보도자료 등록 완료!");
+      //     navigate("/news/press");
+      //   });
     } else {
       e.preventDefault();
       alert("비밀번호가 틀렸습니다.");
