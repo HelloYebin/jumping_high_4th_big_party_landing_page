@@ -117,6 +117,7 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  height: 99%;
 }
 .arrowSvg {
   width: 400px;

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b29cd8c3.css",
-    "main.js": "/static/js/main.7d4cff73.js",
+    "main.css": "/static/css/main.2a25ced8.css",
+    "main.js": "/static/js/main.72e7cd53.js",
     "static/media/1122.mp4": "/static/media/1122.9f277b0b27824d34b235.mp4",
     "static/media/esamanru.ttf": "/static/media/esamanru.5092051bd2ced1c65f91.ttf",
     "static/media/2017.png": "/static/media/2017.9736aff6e6a62024e1e7.png",
@@ -11,6 +11,7 @@
     "static/media/notice.png": "/static/media/notice.b8aab793da83dd401ecc.png",
     "static/media/2016.png": "/static/media/2016.ef7a7e75a12b6fa6860e.png",
     "static/media/DoHyeonRegular.ttf": "/static/media/DoHyeonRegular.33a15385076163ccf1b8.ttf",
+    "static/media/fter_bg.png": "/static/media/fter_bg.aacea2a250599278fa32.png",
     "static/media/ORIGINAL.png": "/static/media/ORIGINAL.1635e6da4e8a46ee6acc.png",
     "static/media/Philosopher-Bold.ttf": "/static/media/Philosopher-Bold.7e98a8743136a6828ccf.ttf",
     "static/media/booth1.png": "/static/media/booth1.d05df5a15bdca0075cd5.png",
@@ -23,11 +24,11 @@
     "static/media/KJFA.png": "/static/media/KJFA.447c2204e6100f1e0733.png",
     "static/media/white.png": "/static/media/white.7acc16d92f28b4b8cc6f.png",
     "index.html": "/index.html",
-    "main.b29cd8c3.css.map": "/static/css/main.b29cd8c3.css.map",
-    "main.7d4cff73.js.map": "/static/js/main.7d4cff73.js.map"
+    "main.2a25ced8.css.map": "/static/css/main.2a25ced8.css.map",
+    "main.72e7cd53.js.map": "/static/js/main.72e7cd53.js.map"
   },
   "entrypoints": [
-    "static/css/main.b29cd8c3.css",
-    "static/js/main.7d4cff73.js"
+    "static/css/main.2a25ced8.css",
+    "static/js/main.72e7cd53.js"
   ]
 }

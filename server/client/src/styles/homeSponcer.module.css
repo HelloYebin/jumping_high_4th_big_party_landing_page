@@ -1,6 +1,6 @@
 .sponcerContainer {
   background-color: #181818;
-  height: 100vh;
+  height: 120vh;
   position: relative;
   z-index: 1;
   transition: 0.5s;
@@ -8,7 +8,7 @@
 .sponcerBg {
   width: 85%;
   position: absolute;
-  bottom: 150px;
+  bottom: 15vh;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

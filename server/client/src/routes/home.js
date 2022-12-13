@@ -63,9 +63,9 @@ function Home() {
       </div>
 
       <div className={styles.videoWrap}>
-        <video src={bg} muted autoPlay loop className={styles.bgVideo}>
+        <video muted autoPlay loop playsInline className={styles.bgVideo}>
           해당 확장자는 지원하지 않습니다.
-          {/* <source src={bg} type="video/mp4" /> */}
+          <source src={bg} type="video/mp4" />
         </video>
 
         <div className={styles.black}></div>
