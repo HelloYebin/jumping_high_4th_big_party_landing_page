@@ -2,7 +2,8 @@
   "presses": [
     {
       "id": 1,
-      "title": "빅파티 4회 개최",
+      "title": "매일 3분! 기초체력 늘리기 - 다이어트운동 홈트레이닝 전신운동",
+      "body": "<iframe width='560' height='315' src='https://www.youtube.com/embed/v0zuJ7HKKTs' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
       "thumbnail": "/image/news.JPG"
     },
     {
@@ -40,6 +41,11 @@
     },
     {
       "id": 8,
+      "title": "담수식물 좀개갓냉이, 아토피 개선 효능 발견",
+      "thumbnail": "/image/news.JPG"
+    },
+    {
+      "id": 9,
       "title": "담수식물 좀개갓냉이, 아토피 개선 효능 발견",
       "thumbnail": "/image/news.JPG"
     }

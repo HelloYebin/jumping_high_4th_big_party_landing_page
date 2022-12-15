@@ -135,7 +135,7 @@
 
   .mapDesc {
     position: relative;
-    left: -30px;
+    left: -60px;
   }
 }
 
@@ -157,8 +157,8 @@
   .descImg {
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: auto;
+    width: 250px;
+    height: 220px;
     padding: 0;
   }
   .content {

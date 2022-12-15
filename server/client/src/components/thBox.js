@@ -49,9 +49,8 @@ export default function ThBox({ dissolve, title, desc, item, link }) {
           <h4
             style={{ color: dissolve ? "white" : "#181818" }}
             className={styles.itemDesc}
-          >
-            {desc}
-          </h4>
+            dangerouslySetInnerHTML={{ __html: desc }}
+          ></h4>
         </div>
         <span>
           <button className={styles.detail} onClick={detail}>

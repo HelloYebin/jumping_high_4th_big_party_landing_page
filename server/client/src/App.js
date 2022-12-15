@@ -9,7 +9,7 @@ import RouteInvite from "./routes/intro/routeInvite";
 import RouteSchedule from "./routes/information/routeSchedule";
 import RoutePrepare from "./routes/information/routePrepare";
 import RouteLocation from "./routes/information/routeLocation";
-import RouteStorage from "./routes/information/routeStorage";
+import RouteBooth from "./routes/information/routeBooth";
 import RouteNotice from "./routes/news/routeNotice";
 import RoutePress from "./routes/news/routePress";
 import RouteJumping from "./routes/news/routeJumping";
@@ -34,7 +34,7 @@ function App() {
             <Route path="/info/schedule" element={<RouteSchedule />} />
             <Route path="/info/prepare" element={<RoutePrepare />} />
             <Route path="/info/location" element={<RouteLocation />} />
-            <Route path="/info/booth" element={<RouteStorage />} />
+            <Route path="/info/booth" element={<RouteBooth />} />
             <Route path="/news/notice" element={<RouteNotice />} />
             <Route path="/news/notice/admin" element={<AdminRouteNotice />} />
             <Route path="/news/press" element={<RoutePress />} />

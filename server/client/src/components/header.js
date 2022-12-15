@@ -56,6 +56,7 @@ export default function Header() {
             />
             <Headerlist
               overMouse={overMouse}
+              ss
               list="행사안내"
               link="/info/schedule"
             />
@@ -67,6 +68,7 @@ export default function Header() {
             <Headerlist overMouse={overMouse} list="참가신청" link="/apply" />
           </ul>
         </div>
+        {/* max-width: 1023px 일때 block */}
         <FontAwesomeIcon
           icon={faBars}
           className={styles.bars}

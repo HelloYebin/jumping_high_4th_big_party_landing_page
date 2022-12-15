@@ -1,12 +1,12 @@
 import RouteNav from "../../components/routeNav";
-import banner from "../../image/notice.png";
 import styles from "./newsStyles/routeNotice.module.css";
 import NoticeContent from "./noticeContent";
 import { useEffect, useState } from "react";
 import Axios from "axios";
 // import "./newsStyles/reactquill.css";
+import RouteBanner from "./../RouteBanner";
 
-export default function AdminRouteNotice() {
+export default function RouteNotice() {
   const [viewNotice, setViewNotice] = useState([]);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function AdminRouteNotice() {
   return (
     <>
       <div className={styles.noticeContainer}>
-        <img src={banner} className={styles.banner} width="100%" alt="banner" />
+        <RouteBanner />
         <RouteNav nav={"행사소식"} current={"공지사항"} />
         <div className={styles.notice}>
           <h1 className={styles.title}>공지사항</h1>

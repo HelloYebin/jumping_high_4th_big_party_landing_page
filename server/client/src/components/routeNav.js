@@ -61,38 +61,28 @@ export default function RouteNav({ current, nav }) {
 
   return (
     <nav className={styles.routeNavContainer}>
-      <div className={styles.nav}>
-        <span>{nav}</span>
-        <span>
-          <FontAwesomeIcon icon={faAngleRight} />
-        </span>
-      </div>
-
-      <div className={styles.navCurrent} onClick={navClick}>
-        <span>{current}</span>
-        <span>
+      <ul className={styles.routeList}>
+        <li>
+          {nav}
+          <FontAwesomeIcon icon={faAngleRight} className={styles.navArrow} />
+        </li>
+        <li onClick={navClick}>
+          {current}
           <FontAwesomeIcon
             icon={faAngleRight}
             className={styles.navArrow}
             style={{ rotate: clickStatus ? "-90deg" : "90deg" }}
           />
-        </span>
-      </div>
-      <div
-        className={styles.navList}
-        style={{
-          display: clickStatus ? "" : "none",
-          width:
-            nav === "행사소식"
-              ? "150px"
-              : "" || nav === "점핑빅파티"
-              ? "170px"
-              : "",
-          left: nav === "점핑빅파티" ? "190px" : "",
-        }}
-      >
-        {lis}
-      </div>
+          <ul
+            className={styles.routeContentList}
+            style={{
+              display: clickStatus ? "" : "none",
+            }}
+          >
+            <li>{lis}</li>
+          </ul>
+        </li>
+      </ul>
     </nav>
   );
 }

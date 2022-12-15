@@ -1,12 +1,12 @@
 import RouteNav from "../../components/routeNav";
-import banner from "../../image/notice.png";
 import styles from "./infoStyles/routeBooth.module.css";
+import RouteBanner from "./../RouteBanner";
 
-export default function RouteStorage() {
+export default function RouteBooth() {
   return (
     <>
       <div className={styles.boothContainer}>
-        <img src={banner} className={styles.banner} width="100%" alt="banner" />
+        <RouteBanner />
         <RouteNav nav={"행사안내"} current={"부스 안내"} />
         <div className={styles.booth}>
           <h1 className={styles.title}>부스 안내</h1>

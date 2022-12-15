@@ -1,10 +1,10 @@
 import styles from "./applyStyles/routeApply.module.css";
-import banner from "../../image/notice.png";
 import reservationIcon from "../../image/reservation.png";
+import RouteBanner from "./../RouteBanner";
 export default function RouteApply() {
   return (
     <div className={styles.applyContainer}>
-      <img src={banner} className={styles.banner} width="100%" alt="banner" />
+      <RouteBanner />
       <div className={styles.apply}>
         <h1 className={styles.title}>참가신청</h1>
         <div className={styles.body}>

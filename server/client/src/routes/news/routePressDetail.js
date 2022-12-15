@@ -1,10 +1,8 @@
 import { useParams } from "react-router-dom";
 import styles from "./newsStyles/routePressDetail.module.css";
-import banner from "../../image/notice.png";
-// import Axios from "axios";
-// import { useEffect, useState } from "react";
 import "./newsStyles/reactquill.css";
 import db from "../../db/data.json";
+import RouteBanner from "./../RouteBanner";
 
 export default function RoutePressDetail() {
   const a = useParams();
@@ -36,7 +34,7 @@ export default function RoutePressDetail() {
 
   return (
     <div className={styles.routeDetailContainer}>
-      <img src={banner} className={styles.banner} width="100%" alt="banner" />
+      <RouteBanner />
       {content}
     </div>
   );

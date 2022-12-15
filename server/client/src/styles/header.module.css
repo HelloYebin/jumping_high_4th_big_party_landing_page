@@ -178,3 +178,17 @@
     height: 80px;
   }
 }
+@media screen and (max-width: 281px) {
+  /* 갤럭시 폴드 */
+  .logo {
+    width: 60px;
+    height: 30px;
+    left: 20px;
+  }
+  .bars {
+    font-size: 20px;
+  }
+  .faX {
+    font-size: 20px;
+  }
+}
