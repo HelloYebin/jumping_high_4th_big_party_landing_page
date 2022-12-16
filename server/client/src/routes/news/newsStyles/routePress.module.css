@@ -1,6 +1,6 @@
 .press {
   margin-top: 0;
-  max-width: 60%;
+  max-width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -16,8 +16,6 @@
   overflow: hidden;
 }
 .pressContent {
-  width: 300px;
-  height: 200px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -28,17 +26,43 @@
 }
 .img {
   transition: 0.2s;
-  width: 300px;
   height: 200px;
+  width: 100%;
 }
 .img:hover {
   transform: scale(1.2);
 }
 .articleTitle {
-  border: 1px solid red;
   color: black;
   text-decoration: none;
   position: relative;
-  width: 300px;
+  width: 30%;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 1023px) {
+  .img {
+    height: 160px;
+  }
+}
+/* width 767px 반응형 모바일*/
+@media all and (max-width: 767px) {
+  .articleTitle {
+    width: 48%;
+  }
+  .body {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* 모바일 */
+  .press {
+    max-width: 90%;
+  }
+  .articleTitle {
+    width: 80%;
+  }
+  .body {
+    justify-content: center;
+  }
 }

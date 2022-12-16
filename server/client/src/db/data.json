@@ -2,14 +2,15 @@
   "presses": [
     {
       "id": 1,
-      "title": "매일 3분! 기초체력 늘리기 - 다이어트운동 홈트레이닝 전신운동",
-      "body": "<iframe width='560' height='315' src='https://www.youtube.com/embed/v0zuJ7HKKTs' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
-      "thumbnail": "/image/news.JPG"
+      "title": "점핑하이와 함께 월드컵 16강 기원 응원송⚽⚽",
+      "body": "<iframe width='560' height='315' src='https://www.youtube.com/embed/FHXyjCKLwxU' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+      "thumbnail": "/image/dunk.jpg"
     },
     {
       "id": 2,
-      "title": "보도자료 제목입니다.",
-      "thumbnail": "/image/news.JPG"
+      "title": "💪남성미 뿜뿜 날레 마스터와 파워풀한 점핑😎",
+      "body": "<iframe width='560' height='315' src='https://www.youtube.com/embed/3EyF58WuVGM' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+      "thumbnail": "/image/blowItUp.jpg"
     },
     {
       "id": 3,

@@ -12,7 +12,6 @@ import RouteLocation from "./routes/information/routeLocation";
 import RouteBooth from "./routes/information/routeBooth";
 import RouteNotice from "./routes/news/routeNotice";
 import RoutePress from "./routes/news/routePress";
-import RouteJumping from "./routes/news/routeJumping";
 import RoutePressDetail from "./routes/news/routePressDetail";
 import ScrollTop from "./components/scrollTop";
 import styles from "./App.module.css";
@@ -39,7 +38,6 @@ function App() {
             <Route path="/news/notice/admin" element={<AdminRouteNotice />} />
             <Route path="/news/press" element={<RoutePress />} />
             <Route path="/news/press/:id" element={<RoutePressDetail />} />
-            <Route path="/news/jumping" element={<RouteJumping />} />
             <Route path="/apply" element={<RouteApply />} />
             <Route path="/write" element={<WriteForm />} />
           </Routes>
