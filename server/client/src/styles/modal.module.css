@@ -10,7 +10,29 @@
 .modal {
   position: fixed;
   z-index: 102;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
+}
+.modalImg {
+  max-width: 100%;
+  max-height: 600px;
+}
+@media screen and (max-width: 1023px) {
+  /* width 1023px 반응형 */
+  .modal {
+    width: 80%;
+  }
+
+  .modalImg {
+    width: 100%;
+    max-height: 800px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* 모바일 가로 */
+}
+
+@media screen and (max-width: 575px) {
 }

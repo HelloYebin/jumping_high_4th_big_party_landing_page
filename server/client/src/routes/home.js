@@ -57,7 +57,7 @@ function Home() {
   };
 
   return (
-    <>
+    <div className={styles.test}>
       <div className={styles.upLogo} onClick={pageUpClick}>
         <FontAwesomeIcon icon={faChevronUp} />
       </div>
@@ -89,7 +89,7 @@ function Home() {
       <div ref={footRef}>
         <HomeFooter dissolve={footerScroll} />
       </div>
-    </>
+    </div>
   );
 }
 export default Home;

@@ -1,4 +1,9 @@
 import styles from "../styles/rdContainer.module.css";
+import history2001 from "../image/2001.png";
+import history2005 from "../image/2005.jpg";
+import history2010 from "../image/2010.png";
+import history2011 from "../image/2011.png";
+import history2014 from "../image/2014.png";
 import bigparty2016 from "../image/2016.png";
 import bigparty2017 from "../image/2017.png";
 import bigparty2018 from "../image/2018.png";
@@ -97,20 +102,34 @@ function RdContainer({ getData, getRdData, rdHorizonValue, scroll }) {
       </section>
       <section className={styles.responsiveArea}>
         <p className={styles.responsiveTimeline}>TIMELINE</p>
-        <RdTimeLine year="2001" body="점핑피트니스의 태동" />
-        <RdTimeLine year="2005" body="점핑 브랜드 로고 등록 / 첫 강사교육" />
-        <RdTimeLine year="2010" body="육각 트램폴린의 발명" />
+        <RdTimeLine
+          year="2001"
+          body="점핑피트니스의 태동"
+          image={history2001}
+        />
+        <RdTimeLine
+          year="2005"
+          body="점핑 브랜드 로고 등록 / 첫 강사교육"
+          image={history2005}
+        />
+        <RdTimeLine
+          year="2010"
+          body="육각 트램폴린의 발명"
+          image={history2010}
+        />
         <RdTimeLine
           year="2011"
           body="독일 FIBO 진출, 5대 피트니스 종목에 선정"
+          image={history2011}
         />
         <RdTimeLine
           year="2014"
           body="점핑코리아 (점핑하이) 설립 / 첫 강사배출 "
+          image={history2014}
         />
-        <RdTimeLine year="2016" body="1회 빅파티" />
-        <RdTimeLine year="2017" body="2회 빅파티" />
-        <RdTimeLine year="2018" body="3회 빅파티" />
+        <RdTimeLine year="2016" body="1회 빅파티" image={bigparty2016} />
+        <RdTimeLine year="2017" body="2회 빅파티" image={bigparty2017} />
+        <RdTimeLine year="2018" body="3회 빅파티" image={bigparty2018} />
       </section>
     </div>
   );

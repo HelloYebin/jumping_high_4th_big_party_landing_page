@@ -1,19 +1,50 @@
 import { useParams } from "react-router-dom";
 import styles from "./newsStyles/routePressDetail.module.css";
 import "./newsStyles/reactquill.css";
-import db from "../../db/data.json";
+// import db from "../../db/data.json";
 import RouteBanner from "./../RouteBanner";
+import { useEffect, useState } from "react";
 
 export default function RoutePressDetail() {
+  const YOUTUBE_KEY = "AIzaSyBFMif6DbfHr54LtPjd7qHOr8ohpxLZ9jQ";
+  const [videoList, setVideoList] = useState([]);
   const a = useParams();
-  const num = a.id;
-  const pressList = db.presses.filter((press) => press.id === Number(num));
+  useEffect(() => {
+    fetch(
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId=PLdxxC-Ev9W2vIRifpuNmMllvLN5CbYx-K&key=${YOUTUBE_KEY}`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("400 or 500 error");
+        }
+        return response.json();
+      })
+      .then((json) => setVideoList(json.items))
+      .catch(() => {
+        console.log("error");
+      });
+  }, []);
 
-  const content = pressList.map((press) => (
-    <div key={press.id} className={styles.article}>
-      <h1>{press.title}</h1>
+  const num = a.id;
+  const pressList = videoList.filter((video) => video.id === num);
+
+  console.log(videoList);
+  const content = pressList.map((video) => (
+    <div key={video.id} className={styles.article}>
+      <h1>{video.snippet.title}</h1>
       <hr />
-      {press.bodyImg ? (
+      <div>
+        <iframe
+          className={styles.BodyVideo}
+          id="ytplayer"
+          type="text/html"
+          width="560"
+          height="405"
+          src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`}
+          allowFullScreen
+        ></iframe>
+      </div>
+      {/* {press.bodyImg ? (
         <img
           width="600px"
           height="600px"
@@ -28,7 +59,7 @@ export default function RoutePressDetail() {
       <span
         dangerouslySetInnerHTML={{ __html: press.body }}
         className={styles.body}
-      ></span>
+      ></span> */}
     </div>
   ));
 

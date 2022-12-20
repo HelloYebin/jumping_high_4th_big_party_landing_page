@@ -56,20 +56,6 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 1024px) {
-  .content:hover {
-    transition-duration: 0.2s;
-    transform: translateY(-30px);
-  }
-  .thContainer {
-    height: 80vh;
-  }
-  .thBody {
-    position: absolute;
-    bottom: 0;
-  }
-}
-
 .responsiveDetail {
   margin: 15px 0 15px 0;
   position: relative;
@@ -101,6 +87,24 @@
   right: 20px;
   bottom: 20px;
   cursor: pointer;
+}
+
+.test {
+  position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+  .content:hover {
+    transition-duration: 0.2s;
+    transform: translateY(-30px);
+  }
+  .thContainer {
+    height: 80vh;
+  }
+  .thBody {
+    position: absolute;
+    bottom: 0;
+  }
 }
 
 @media screen and (max-width: 1023px) {
