@@ -57,22 +57,24 @@
 }
 
 .responsiveDetail {
-  margin: 15px 0 15px 0;
-  position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+.detailBtn {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 13pt;
   background-color: #181818;
   border: 1px solid white;
-  display: none;
-}
-.responsiveBtn {
-  color: whitesmoke;
-  width: 100px;
-  font-weight: bold;
-  font-size: 10pt;
-}
-
-.linkBtn {
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
   text-decoration: none;
 }
 .mapDetail {
@@ -87,6 +89,7 @@
   right: 20px;
   bottom: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .test {
@@ -185,7 +188,13 @@
     left: 50%;
     transform: translateX(-50%);
   }
-  .responsiveDetail {
-    display: block;
+  .detailBtn {
+    width: 114px;
+    font-weight: bold;
+    font-size: 10pt;
+    margin: 35px 0 0 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

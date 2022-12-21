@@ -1,6 +1,6 @@
 .press {
   margin-top: 0;
-  max-width: 80%;
+  width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -10,27 +10,25 @@
   text-align: center;
 }
 .body {
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  overflow: hidden;
+  max-width: 100%;
 }
 .pressContent {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 15px;
 }
 .imgContainer {
   overflow: hidden;
+  width: 100%;
 }
 .img {
   transition: 0.2s;
-  height: 200px;
+  height: 100%;
   width: 100%;
-}
-.img:hover {
-  transform: scale(1.2);
+  border-radius: 15px;
 }
 .articleTitle {
   color: black;
@@ -40,9 +38,6 @@
   margin-bottom: 40px;
 }
 @media screen and (max-width: 1023px) {
-  .img {
-    height: 160px;
-  }
 }
 /* width 767px 반응형 모바일*/
 @media all and (max-width: 767px) {

@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.2a25ced8.css",
-    "main.js": "/static/js/main.72e7cd53.js",
+    "main.css": "/static/css/main.a60e9900.css",
+    "main.js": "/static/js/main.90af0c8b.js",
     "static/media/1122.mp4": "/static/media/1122.9f277b0b27824d34b235.mp4",
     "static/media/esamanru.ttf": "/static/media/esamanru.5092051bd2ced1c65f91.ttf",
     "static/media/2017.png": "/static/media/2017.9736aff6e6a62024e1e7.png",
     "static/media/KOTRALEAP.ttf": "/static/media/KOTRALEAP.e848c0c12f25f9a935b3.ttf",
     "static/media/trampoline_history.png": "/static/media/trampoline_history.332ec1681f53c40a427e.png",
     "static/media/2018.png": "/static/media/2018.c1436120542fa19608fa.png",
+    "static/media/summary.png": "/static/media/summary.549b97ae807d5211d06d.png",
     "static/media/notice.png": "/static/media/notice.b8aab793da83dd401ecc.png",
     "static/media/2016.png": "/static/media/2016.ef7a7e75a12b6fa6860e.png",
+    "static/media/2010.png": "/static/media/2010.5236676d42a685128706.png",
     "static/media/DoHyeonRegular.ttf": "/static/media/DoHyeonRegular.33a15385076163ccf1b8.ttf",
+    "static/media/2011.png": "/static/media/2011.2e51b6123f7ef00d00c9.png",
     "static/media/fter_bg.png": "/static/media/fter_bg.aacea2a250599278fa32.png",
     "static/media/ORIGINAL.png": "/static/media/ORIGINAL.1635e6da4e8a46ee6acc.png",
+    "static/media/2001.png": "/static/media/2001.39c7cf06b31a2b2f5a9e.png",
     "static/media/Philosopher-Bold.ttf": "/static/media/Philosopher-Bold.7e98a8743136a6828ccf.ttf",
+    "static/media/2005.jpg": "/static/media/2005.86e4df319d2329c85928.jpg",
     "static/media/booth1.png": "/static/media/booth1.d05df5a15bdca0075cd5.png",
+    "static/media/2014.png": "/static/media/2014.b5dcd807e8b1aa420c7c.png",
     "static/media/logo.png": "/static/media/logo.b5dcd807e8b1aa420c7c.png",
     "static/media/Helvetica.ttf": "/static/media/Helvetica.2ebdf8d31ac364978012.ttf",
     "static/media/reservation.png": "/static/media/reservation.918530273d38c333842d.png",
@@ -24,11 +30,11 @@
     "static/media/KJFA.png": "/static/media/KJFA.447c2204e6100f1e0733.png",
     "static/media/white.png": "/static/media/white.7acc16d92f28b4b8cc6f.png",
     "index.html": "/index.html",
-    "main.2a25ced8.css.map": "/static/css/main.2a25ced8.css.map",
-    "main.72e7cd53.js.map": "/static/js/main.72e7cd53.js.map"
+    "main.a60e9900.css.map": "/static/css/main.a60e9900.css.map",
+    "main.90af0c8b.js.map": "/static/js/main.90af0c8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2a25ced8.css",
-    "static/js/main.72e7cd53.js"
+    "static/css/main.a60e9900.css",
+    "static/js/main.90af0c8b.js"
   ]
 }

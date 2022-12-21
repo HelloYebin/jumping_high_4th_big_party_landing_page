@@ -16,7 +16,6 @@ export default function RoutePress() {
       .then((response) => response.json())
       .then((json) => setVideoList(json.items));
   }, []);
-  console.log(videoList);
 
   let content =
     videoList &&

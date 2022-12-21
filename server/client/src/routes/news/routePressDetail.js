@@ -28,18 +28,15 @@ export default function RoutePressDetail() {
   const num = a.id;
   const pressList = videoList.filter((video) => video.id === num);
 
-  console.log(videoList);
   const content = pressList.map((video) => (
     <div key={video.id} className={styles.article}>
-      <h1>{video.snippet.title}</h1>
+      <p className={styles.videoTitle}>{video.snippet.title}</p>
       <hr />
-      <div>
+      <div className={styles.test}>
         <iframe
           className={styles.BodyVideo}
           id="ytplayer"
           type="text/html"
-          width="560"
-          height="405"
           src={`https://www.youtube.com/embed/${video.snippet.resourceId.videoId}`}
           allowFullScreen
         ></iframe>

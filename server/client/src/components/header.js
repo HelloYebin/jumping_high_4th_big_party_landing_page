@@ -141,7 +141,9 @@ export default function Header() {
               className={styles.resLink}
               style={{ color: overMouse ? "#59CE8F" : "white" }}
             >
-              <p className={styles.resBtn}>참가신청</p>
+              <p className={`${styles.resBtn} ${styles.responsiveApplyBtn}`}>
+                참가신청
+              </p>
             </Link>
           </li>
         </ul>

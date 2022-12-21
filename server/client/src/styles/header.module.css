@@ -132,6 +132,9 @@
 .resBtn:hover {
   color: #59ce8f;
 }
+.responsiveApplyBtn {
+  color: #59ce8f;
+}
 @media screen and (max-width: 1023px) {
   /* width 1023px 반응형 */
   .headerList {
